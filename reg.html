@@ -7,6 +7,7 @@
     <style >
         #date{
             text-align: center;
+            font-weight:bold;
         }
         #content{
             text-align: center;
@@ -20,16 +21,18 @@
         }
         body{
             background-color:gray;
-            background:url("img/dm.mp4") no-repeat center0px;
+            background-image:url(img/99.jpeg);
+            background-size: 100% 200%;
+            
         }
-        video#bgvideo  {
+        /* video#bgvideo  {
 
             position: fixed; right:0; bottom:0;
 
             min-width:100%; min-height:100%; width: auto;height:
 
             auto;z-index:-100; background-size: cover;
-        }
+        } */
     </style>
 </head>
 <body >
@@ -37,7 +40,7 @@
 <form  onsubmit="return confirm('是否进行提交？')" action="login.html">
     <div id="date">
         
-        <h1>个人信息注册页面</h1><br/>
+        <h1><b>个人信息注册页面</b></h1><br/>
         <table align="center">
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;用户名:</td>
@@ -108,12 +111,12 @@
     </div>
 </form>
 <div id="div"></div>
-<video id="bgvideo" preload="auto" autoplay="autoplay" loop="loop" 
+<!-- <video id="bgvideo" preload="auto" autoplay="autoplay" loop="loop" 
     poster="img/4.jpg" muted="muted" >
     <source src="img/dm.mp4" type="video/mp4"/>  
 </video>
 <audio  autoplay="autoplay">
     <source src="img/1.mp3" type="audio/mpeg">
-</audio>
+</audio> -->
 </body>
 </html>
