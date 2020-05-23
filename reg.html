@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息修改</title>
+    <style >
+        #date{
+            text-align: center;
+        }
+        #content{
+            text-align: center;
+           
+        }
+        #right{
+            float: right;
+        }
+        #left{
+            float: right;
+        }
+        body{
+            background-color:gray;
+            background:url("img/dm.mp4") no-repeat center0px;
+        }
+        video#bgvideo  {
+
+            position: fixed; right:0; bottom:0;
+
+            min-width:100%; min-height:100%; width: auto;height:
+
+            auto;z-index:-100; background-size: cover;
+        }
+    </style>
+</head>
+<body >
+    <a href="index.html" ><b><strong>返回上一页</strong></b></a>
+<form  onsubmit="return confirm('是否进行提交？')" action="login.html">
+    <div id="date">
+        
+        <h1>个人信息注册页面</h1><br/>
+        <table align="center">
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;用户名:</td>
+                <td><input name="loginname" type="text" maxlength="12" required
+                     /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;密&nbsp;&nbsp;&nbsp;码:</td>
+                <td><input name="pass" type="password" maxlength="12" required
+                    pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" /></td>
+            </tr>
+            <tr>
+                <td>确认密码:</td>
+                <td><input name="pass" type="password" maxlength="12" required
+                    pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" /></td>
+            </tr>
+            <tr>
+                <td>真实名字:</td>
+                <td><input name="realname" type="text" required /></td>
+            </tr>
+            <tr>
+                <td>出生日期:</td>
+                <td align="left"><input name="birth" type="date" value="1990/10/10"/></td>
+            </tr>
+            <tr>
+                <td> 固定电话:</td>
+                <td><input name="guphone" type="tel" pattern="^(\d{3,4}\-?\d{7,8}$)"/></td>
+            </tr>
+            <tr>
+                <td>  手机号码:</td>
+                <td><input name="myphone" type="tel" patten="^\d{11}$"/></td>
+            </tr>
+            <tr>
+                <td> E-mail地址:&nbsp;&nbsp;&nbsp;</td>
+                <td><input name="myemail" type="email" multiple/></td>
+            </tr>
+            <tr>
+                <td>博客主页:</td>
+                <td><input name="myurl" type="url" placeholder="http://www.baidu.com"/></td>
+            </tr>
+            <tr>
+                <td>身份证号码:&nbsp;&nbsp;</td>
+                <td><input name="car&nbsp;&nbsp;d" type="text" pattern="^\d{11}$" required/></td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;教育情况：</td>
+                <td align="left"><select>
+                    <option value="小学">小学</option>
+                    <option value="初中">初中</option>
+                    <option value="高中">高中</option>
+                    <option value="大专">大专</option>
+                    <option value="本科">本科</option>
+                    <option value="研究生">研究生</option>
+                    <option value="硕士">硕士</option>
+                    <option value="其他">其他</option>
+                </select></td>
+            </tr>
+            <tr></tr><tr></tr><tr></tr>
+            <tr></tr><tr></tr><tr></tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input name="提交" type="submit"  /></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input name="重置" type="reset" /></td>
+               
+            </tr>
+        </table>
+    </div>
+</form>
+<div id="div"></div>
+<video id="bgvideo" preload="auto" autoplay="autoplay" loop="loop" 
+    poster="img/4.jpg" muted="muted" >
+    <source src="img/dm.mp4" type="video/mp4"/>  
+</video>
+<audio  autoplay="autoplay">
+    <source src="img/1.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>

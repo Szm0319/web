@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <style>
+        @import"style.css";
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #bk{
+            text-align: center;
+            width: 100%;
+            height: 15%;
+            position: relative;
+            z-index:9999;
+            background:url(img/11.jpg)
+        }
+        #left{
+            float: left;
+            width: 15%;
+            height: 100%;
+            position:absolute;
+            
+           
+        } #right{
+            float:right;
+            left:85%;
+            width: 15%;
+            height: 100%;
+            position: absolute; 
+        }
+        #center{
+            float:right;
+            background-image:url(img/13.jpg);
+            background-size: 1070px 100%;
+            left:15%;
+            width: 70%;
+            height: 100%;
+            position: absolute;
+            text-align: center;
+            
+        }
+        #bk li a{
+            text-decoration: none;
+            color:black;
+        }
+        ul,a{ font-size: 15px;
+                list-style: none; 
+                text-decoration: none;
+                background-color:rgb(189, 243, 89); 
+                width: 100px; 
+                text-align: center; 
+                border: 0px solid rgb(189, 243, 89); 
+                border-radius: 6px; /*圆角*/
+                margin-top: 1px;
+            } 
+             a{
+                  display: block;
+             }
+        #son{
+            display: none;
+        }
+        #father{
+            float: left;
+            margin-left: 1px;
+        }
+        #father:hover #son{
+            display: block;
+            clear: both;
+        }
+        #son li:hover>a{
+            background-color: dimgrey;
+        }
+        #zhuye{
+            color: rgba(116, 207, 41, 0.733);
+        }
+        #button{
+            font-size: 15px;
+                list-style: none; 
+                text-decoration: none;
+                background-color:rgb(189, 243, 89); 
+                width: 100px; 
+                text-align: center; 
+                border: 0px solid rgb(189, 243, 89); 
+                border-radius: 0px; /*圆角*/
+                margin-top: 1px;
+        }
+            #msBox {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            height: 0.88rem;
+            line-height: 0.88rem;
+            width: 80%;
+            text-align: center;
+            font-size: 0.28rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 0.1rem;
+            }
+    </style>
+  <script src="/bk/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="/bk/layer/layer.js"></script>
+</head>
+<body>
+    <div id="bk">
+        <marquee scrollamount="6" direction="left">
+            <img src="img/017.gif" width="15" height="15">
+            <img src="img/017.gif" width="15" height="15">
+            <img src="img/017.gif" width="15" height="15">
+        </marquee>
+        <ul id="father">
+            <li><a href="#">推荐图书</a>
+                <ul id="son">
+                    <li><a href="#">修仙</a></li>
+                    <li><a href="#">玄幻</a></li>
+                    <li><a href="#">武侠</a></li>
+                    <li><a href="#">游戏</a></li>
+                    <li><a href="#">恐怖</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="left">
+        <video id="bgvideo" preload="auto" autoplay="autoplay" 
+        poster="img/4.jpg" style="width:100%; height:100%; object-fit: fill">
+        <source src="img/qianxu.mp4"  type="video/mp4"/>  
+        </video> 
+    </div>
+    <form >
+    <div id="center">
+        <br/><br/>
+        <h1 id="zhuye">主&nbsp;&nbsp;页</h1><br/><br/>
+        <table  style="widows: 45px;;height:35%;margin:auto">
+            <tr>
+                <td>用户名:</td>
+                <td><input name="loginname" type="text" maxlength="12" required
+                     /></td>
+            </tr>
+            <tr>
+                <td>密&nbsp;&nbsp;&nbsp;码:</td>
+                <td><input name="pass" type="password" maxlength="12" required
+                    pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" /></td>
+            </tr>
+        </table><br/><br/><br/>
+        <input id="button" type="button" value="登录" onclick="msBox()" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input id="button" type="button" value="注册" onclick="location='reg.html'"  />
+        <script type="text/JavaScript">
+        function msBox() {
+            layer.msg('登录成功');
+            setTimeout("javascript:location.href='index.html'", 2000);
+    }
+        </script>
+    </div>
+</form>
+    <div id="right">
+        <video id="bgvideo" preload="auto" autoplay="autoplay" 
+        poster="img/4.jpg" style="width:100%; height:100%; object-fit: fill">
+        <source src="img/qianxu.mp4"  type="video/mp4"/>  
+        </video> 
+    </div>
+</body>
+</html>
