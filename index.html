@@ -5,40 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
-            width: 500px;
-            height: 249px;
-        }
-        th {
-            height: 35px;
-        }
-        table,
-        td, th {
-            border: 1px solid pink;
-            /* 合并相邻的边框 */
-            border-collapse: collapse;
-            font-size: 14px;
-            text-align: center;
-        }
-        body{
-            background-color:gray;
-            background-image:url(img/98.jpg);
-            text-align: center;
+        .logo{
+            left:10%;
+            float: left;
+            position: relative;
+        
         }
         #name{
+            float: left;
             color: rgb(80, 34, 206);
+            position: absolute;
+            margin-left:12%;
+            margin-top: 30px;
+            position: relative;
         }
-        .layui-carousel{
-            margin-left:20%;
-            
-            
-            position: absolute; 
-      }
+        .search-box{
+            float: left;
+            left:14%;
+            width: 18%;
+            float: left;
+            margin-top: 37px;
+            position: relative;
+        }
+        .head{
+            float: left;
+            height: 100px;
+            width:100%;
+            text-align: center;
+          
+        }
+        .button{
+            float:right;
+            right:10%;
+            margin-top: 37px;
+            position: relative;
+        }
+        .table1{
+            border: 5px solid blueviolet;
+            background-color: blueviolet;
+            opacity: 1;
+            width: 100%;
+            font-weight: bolder;
+            text-align: center;
+        }
+        #table2{
+            text-align: center;
+        }
     </style>
     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="/css/index.css" media="all">
+    <script src="/bk/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="/layui/layui.js"></script>
+    
 </head>
 <body>
-    <h1 id="name">这里是小说天堂</h1>
+    <script>
+        //一般直接写在一个js文件中
+        layui.use(['layer', 'form'], function(){
+          var layer = layui.layer
+          ,form = layui.form;
+          
+          layer.msg('Hello World');
+        });
+        </script> 
+        <div class="wrap">
+             <div class="head">
+                <div class="logo"><img src="/img/logo.jpg" alt="logo" height=80px;></div>
+                   <h1 id="name">小说天堂</h1>
+                <div class="search-box">
+                    <input  type="search" placeholder="雪中悍刀行" autocomplete="off" width="15%" >
+                </div>
+                <div class="button">
+                <input type="button" id="login" class="layui-btn" onclick="openLogin()" value="登录"></a>
+                    <a href="http://www.layui.com" class="layui-btn">注册</a>
+                    <script type="text/JavaScript">
+                       layer.open({
+                        type: 2, 
+                        content: 'login.html' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+                        });
+                        
+                    </script>
+                </div>
+            </div>
+            <div class="daohang">
+                <table class="table1" >
+                    <tr id="tr1">
+                        <nav>
+                            <td><a href="">首页</a></td>
+                            <td><a href="">书库</a></td>
+                            <td><a href="">排行</a><td>
+                            <td><a href="">完本</a></td>
+                            <td><a href="">作者专区</a></td>
+                        </nav>
+                    </tr>
+                </table>
+            </div>
+                <div class="fenlei">
+                    <ul id="father">
+                        <li><a href="#">推荐图书</a>
+                            <ul id="son">
+                                <li><a href="#">奇幻玄幻</a></li>
+                                <li><a href="#">武侠仙侠</a></li>
+                                <li><a href="#">历史军事</a></li>
+                                <li><a href="#">都市娱乐</a></li>
+                                <li><a href="#">竞技同人</a></li>
+                                <li><a href="http://www.zongheng.com/category/15.html" >科幻游戏</a></li>
+                                <li><a href="http://www.zongheng.com/category/18.html" >悬疑灵异</a></li>
+                                <li><a href="http://www.zongheng.com/category/40.html" >二次元</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     <div class="layui-carousel" id="test1">
         <div carousel-item id="test2">
           <div><img src="img/41.jpg" width="100%" height="100%" /></div>
@@ -47,86 +126,45 @@
           <div><img src="img/44.jpg" width="100%" height="100%"/></div>
           <div><img src="img/45.jpg" width="100%" height="100%"/></div>
         </div>
-      </div>
-      <script src="/layui/layui.js"></script>
-<script>
-layui.use('carousel', function(){
-  var carousel = layui.carousel;
-  //建造实例
-  carousel.render({
-    elem: '#test1'
-    ,width: '60%' //设置容器宽度
-    ,arrow: 'always' //始终显示箭头
-    //,anim: 'updown' //切换动画方式
-  
-});
-});
-</script>
-<br/>
-    <div>
-    <table align="center" cellspacing="0">
-        <thead>
-            <tr>
-                <th>排名</th>
-                <th>关键词</th>
-                <th>头像</th>
-                <th>进化趋势</th>
-                <th>最近七日</th>
-                <th>相关链接</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>鬼吹灯</td>
-                <td><img src="img/37.jpg" width="40px";height="50px";></td>
-                <td>猴化</td>
-                <td>123</td>
-                <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
-            </tr>
-    
-            <tr>
-                    <td>2</td>
-                    <td>马洪浩</td>
-                    <td><img src="img/33.jpg" width="40px";height="50px";></td>
-                    <td>熊化</td>
-                    <td>123</td>
-                    <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
-            </tr>
-            <tr>
-                    <td>3</td>
-                    <td>宋鹏程</td>
-                    <td><img src="img/32.jpg" width="40px";height="50px";></td>
-                    <td>汪化</td>
-                    <td>123</td>
-                    <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
-            </tr>
-            <tr>
-                    <td>4</td>
-                    <td>李宇昂</td>
-                    <td><img src="img/36.jpg" width="40px";height="50px";></td>
-                    <td>怒化</td>
-                    <td>123</td>
-                    <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
-            </tr>
-            <tr>
-                    <td>5</td>
-                    <td>金睿恒</td>
-                    <td><img src="img/34.jpg" width="40px";height="50px";></td>
-                    <td>人化</td>
-                    <td>123</td>
-                    <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
-            </tr>
-            <tr>
-                    <td>6</td>
-                    <td>邵泽明</td>
-                    <td><img src="img/31.jpg" width="40px";height="50px";></td>
-                    <td>稳定</td>
-                    <td>123</td>
-                    <td> <a href="#">贴吧</a> <a href="#">图片</a> <a href="#">百科</a> </td>
-            </tr>
-        </tbody>           
-        </table>
     </div>
+      <script src="/layui/layui.js"></script>
+        <script>
+            layui.use('carousel', function(){
+            var carousel = layui.carousel;
+            //建造实例
+            carousel.render({
+                elem: '#test1'
+                ,width: '50%'
+                ,height:'350px' //设置容器宽度
+                ,arrow: 'always' //始终显示箭头
+                //,anim: 'updown' //切换动画方式
+            
+            });
+            });
+        </script>
+        <div id=win style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; border:1px solid #888; background-color:blueviolet; text-align:center">登录框
+            <table  style=" width:100%;;height:90%;margin:auto" id="table2">
+                <tr>
+                    <td id="td1">用户名:</td>
+                    <td><input name="loginname" type="text" maxlength="12" required
+                         /></td>
+                </tr>
+                <tr>
+                    <td id="td1">密&nbsp;&nbsp;&nbsp;码:</td>
+                    <td><input name="pass" type="password" maxlength="12" required
+                        pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" /></td>
+                </tr>
+            </table>
+            <a href="javascript:closeLogin();">关闭登录框</a></div>
+        <script>
+        function openLogin(){
+        document.getElementById("win").style.display="";
+        }
+        function closeLogin(){
+        document.getElementById("win").style.display="none";
+        }
+        </script>
+      
+
 </body>
 </html>
