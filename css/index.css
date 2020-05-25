@@ -1,24 +1,25 @@
 .layui-carousel{
     float: left;
-    left: 15%;
+    left: 25%;
 }
 li a{
     text-decoration: none;
-    color:rgb(240, 30, 30);
+    color:black;
+    
 }
-.fenlei ul,a{ font-size: 15px;
-        list-style: none; 
-        text-decoration: none;
-        
-        width: 100px; 
-        text-align: center; 
-        border: 6px; 
-        border-radius: 1px; 圆角
-        margin-top: 1px;
-    } 
-     /* a{
-          display: block; 无序
-     } */
+.son,a{ font-size: 15px;
+    list-style: none; 
+    text-decoration: none;
+    background-color:blueviolet; 
+    width: 100px; 
+    text-align: center; 
+    border: 2px solid blueviolet; 
+    border-radius: 6px; /*圆角*/
+    margin-top: 1px;
+} 
+ a{
+      display: block;
+ }
 #son{
     display: none;
 }
@@ -28,8 +29,9 @@ li a{
 }
 #father:hover #son{
     display: block;
-    clear: both;
+    clear: both;position:absolute;z-index:999;
 }
 #son li:hover>a{
-    background-color: rgb(252, 2, 2);
+    background-color: rgb(113, 177, 30);
+    
 }

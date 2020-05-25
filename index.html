@@ -14,7 +14,6 @@
         #name{
             float: left;
             color: rgb(80, 34, 206);
-            position: absolute;
             margin-left:12%;
             margin-top: 30px;
             position: relative;
@@ -32,7 +31,6 @@
             height: 100px;
             width:100%;
             text-align: center;
-          
         }
         .button{
             float:right;
@@ -51,6 +49,15 @@
         #table2{
             text-align: center;
         }
+        #title1{
+            height: 50px;
+            color: blueviolet;
+            margin-top:50px;
+            font-size: large;
+        }
+        .lunbo{
+            background-image:url(img/13.jpg);
+        }
     </style>
     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="/css/index.css" media="all">
@@ -64,107 +71,165 @@
         layui.use(['layer', 'form'], function(){
           var layer = layui.layer
           ,form = layui.form;
-          
-          layer.msg('Hello World');
         });
-        </script> 
-        <div class="wrap">
-             <div class="head">
+    </script> 
+<div class="wrap">
+            <div class="head">
                 <div class="logo"><img src="/img/logo.jpg" alt="logo" height=80px;></div>
-                   <h1 id="name">小说天堂</h1>
+                   <h1 id="name">正能量加油站</h1>
                 <div class="search-box">
-                    <input  type="search" placeholder="雪中悍刀行" autocomplete="off" width="15%" >
+                    <input type="search" placeholder="I LOVE IU"/>
                 </div>
                 <div class="button">
-                <input type="button" id="login" class="layui-btn" onclick="openLogin()" value="登录"></a>
-                    <a href="http://www.layui.com" class="layui-btn">注册</a>
-                    <script type="text/JavaScript">
-                       layer.open({
-                        type: 2, 
-                        content: 'login.html' //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
-                        });
-                        
-                    </script>
+                <input type="button" id="login" class="layui-btn" onclick="openLogin()" value="Join&nbsp;us">
                 </div>
             </div>
             <div class="daohang">
                 <table class="table1" >
                     <tr id="tr1">
                         <nav>
-                            <td><a href="">首页</a></td>
-                            <td><a href="">书库</a></td>
-                            <td><a href="">排行</a><td>
-                            <td><a href="">完本</a></td>
-                            <td><a href="">作者专区</a></td>
+                            <td></td>
+                            <td><ul id="father">
+                                <li><a href="#">首页</a>
+                                    <ul id="son">
+                                        <li><a href="#">宝藏分享</a></li>
+                                        <li><a href="#">换装视频</a></li>
+                                        <li><a href="#">历史军事</a></li>
+                                        <li><a href="#">娱乐段子</a></li>
+                                        <li><a href="#">乡村故事</a></li>
+                                        <li><a href="http://www.zongheng.com/category/15.html" >游戏教学</a></li>
+                                        <li><a href="http://www.zongheng.com/category/18.html" >原创动漫</a></li>
+                                        <li><a href="http://www.zongheng.com/category/40.html" >二次元</a></li>
+                                    </ul>
+                                </li>
+                            </ul></td>
+                            <td><ul id="father">
+                                <li><a href="#">热门视频</a>
+                                    <ul id="son">
+                                        <li><a href="#">奇幻玄幻</a></li>
+                                        <li><a href="#">武侠仙侠</a></li>
+                                        <li><a href="#">历史军事</a></li>
+                                        <li><a href="#">都市娱乐</a></li>
+                                        <li><a href="#">竞技同人</a></li>
+                                        <li><a href="http://www.zongheng.com/category/15.html" >科幻游戏</a></li>
+                                        <li><a href="http://www.zongheng.com/category/18.html" >悬疑灵异</a></li>
+                                        <li><a href="http://www.zongheng.com/category/40.html" >二次元</a></li>
+                                    </ul>
+                                </li>
+                            </ul></td>
+                            <td><ul id="father">
+                                <li><a href="#">热门作者</a>
+                                    <ul id="son">
+                                        <li><a href="/detail/detail.html">JC.BOX陈莫甜</a></li>
+                                        <li><a href="/detail/lumi.html">鹿米鹿米</a></li>
+                                    </ul>
+                                </li>
+                            </ul><td>
+                            <td><ul id="father">
+                                <li><a href="#">首页</a>
+                                    <ul id="son">
+                                        <li><a href="#">奇幻玄幻</a></li>
+                                        <li><a href="#">武侠仙侠</a></li>
+                                        <li><a href="#">历史军事</a></li>
+                                        <li><a href="#">都市娱乐</a></li>
+                                        <li><a href="#">竞技同人</a></li>
+                                        <li><a href="http://www.zongheng.com/category/15.html" >科幻游戏</a></li>
+                                        <li><a href="http://www.zongheng.com/category/18.html" >悬疑灵异</a></li>
+                                        <li><a href="http://www.zongheng.com/category/40.html" >二次元</a></li>
+                                    </ul>
+                                </li>
+                            </ul></td>
+                            <td><ul id="father">
+                                <li><a href="#">我的</a>
+                                    <ul id="son">
+                                        <li><a href="#">个人资料</a></li>
+                                        <li><a href="#">浏览记录</a></li>
+                                        <li><a href="#">退出登录</a></li>
+                                        <li><a href="#">我的分享</a></li>
+                                    </ul>
+                                </li>
+                            </ul></td>
                         </nav>
                     </tr>
                 </table>
             </div>
-                <div class="fenlei">
-                    <ul id="father">
-                        <li><a href="#">推荐图书</a>
-                            <ul id="son">
-                                <li><a href="#">奇幻玄幻</a></li>
-                                <li><a href="#">武侠仙侠</a></li>
-                                <li><a href="#">历史军事</a></li>
-                                <li><a href="#">都市娱乐</a></li>
-                                <li><a href="#">竞技同人</a></li>
-                                <li><a href="http://www.zongheng.com/category/15.html" >科幻游戏</a></li>
-                                <li><a href="http://www.zongheng.com/category/18.html" >悬疑灵异</a></li>
-                                <li><a href="http://www.zongheng.com/category/40.html" >二次元</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    <div class="layui-carousel" id="test1">
-        <div carousel-item id="test2">
-          <div><img src="img/41.jpg" width="100%" height="100%" /></div>
-          <div><img src="img/42.jpg" width="100%" height="100%"/></div>
+            <script src="/layui/layui.js">
+            </script>
+            <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+            <script>
+            layui.use('element', function(){
+            var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+            
+            //监听导航点击
+            element.on('nav(demo)', function(elem){
+                //console.log(elem)
+                layer.msg(elem.text());
+            });
+            });
+            </script>
+</div>
+<div class="lunbo">
+    <div class="layui-carousel" id="test2" >
+        <div carousel-item id="">
+          <div><video id="video1" src="img/lunbo1.mp4" autoplay muted  width="100%" height="100%"></video></div>
+          <div><video id="video1" src="img/lunbo2.mp4" autoplay muted  width="100%" height="100%"></div>
           <div><img src="img/43.jpg" width="100%" height="100%"/></div>
           <div><img src="img/44.jpg" width="100%" height="100%"/></div>
           <div><img src="img/45.jpg" width="100%" height="100%"/></div>
-        </div>
+          <audio src="img/xia.mp3" loop autoplay ></audio>
+        </div>     
     </div>
-      <script src="/layui/layui.js"></script>
+    <script src="/layui/layui.js"></script>
         <script>
             layui.use('carousel', function(){
             var carousel = layui.carousel;
             //建造实例
             carousel.render({
-                elem: '#test1'
+                elem: '#test2'
                 ,width: '50%'
-                ,height:'350px' //设置容器宽度
-                ,arrow: 'always' //始终显示箭头
+                ,height:'350px' //设置容器宽
+                ,arrow: 'hover' //始终显示箭头
                 //,anim: 'updown' //切换动画方式
-            
+                ,interval:'15000'
+                ,indicator:'inside'
             });
-            });
+            });   
         </script>
-        <div id=win style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; border:1px solid #888; background-color:blueviolet; text-align:center">登录框
-            <table  style=" width:100%;;height:90%;margin:auto" id="table2">
-                <tr>
-                    <td id="td1">用户名:</td>
-                    <td><input name="loginname" type="text" maxlength="12" required
-                         /></td>
-                </tr>
-                <tr>
-                    <td id="td1">密&nbsp;&nbsp;&nbsp;码:</td>
-                    <td><input name="pass" type="password" maxlength="12" required
-                        pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" /></td>
-                </tr>
-            </table>
-            <a href="javascript:closeLogin();">关闭登录框</a></div>
-        <script>
-        function openLogin(){
-        document.getElementById("win").style.display="";
-        }
-        function closeLogin(){
-        document.getElementById("win").style.display="none";
-        }
-        </script>
-      
+</div>
+<div id="main">
+        <!-- sdas :<img src="img/43.jpg" width="100%" height="100%"/> -->
 
+</div>
+<div id=win style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px;
+             margin-top:-200px; border:5px solid #888; background-color:whitesmoke;opacity: 0.8; text-align:center">
+            <div id="title1">
+                正能量加油站
+            </div>
+            <div id="content1">
+                   用户名:
+                    <input name="loginname" type="text" maxlength="12" required
+                         /><br/><br/><br/>
+                   密&nbsp;&nbsp;&nbsp码:
+                    <input name="pass" type="password" maxlength="12" required
+                        pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" />
+                    <br/><br/><br/><br/>
+                    <input type="button" id="login" class="layui-btn" onclick="welcome()" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" id="login" class="layui-btn" onclick="location='reg.html'" value="注册"><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <a href="javascript:closeLogin();">关闭登录框</a>
+            </div>
+                <script>
+                    function welcome(){
+                        layer.msg('青春的日子里有你有我');
+                        setTimeout("javascript:closeLogin();", 0);
+                        setTimeout("layer.msg('未来我们伴美好同行');", 4500);
+                    }
+                    function openLogin(){
+                    document.getElementById("win").style.display="";
+                    }
+                    function closeLogin(){
+                    document.getElementById("win").style.display="none";
+                    }
+                </script>  
+</div>
 </body>
 </html>
