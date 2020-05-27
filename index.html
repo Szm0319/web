@@ -6,25 +6,25 @@
     <title>正能量加油站</title>
     <style>
         .logo{
-            left:10%;
+            left:1%;
             float: left;
-            position: relative;
+            position: absolute;
         
         }
         #name{
             float: left;
-            color: rgb(80, 34, 206);
-            margin-left:12%;
-            margin-top: 30px;
-            position: relative;
+            color: rgb(206, 34, 206);
+            margin-left:14%;
+            margin-top: 35px;
+            position: absolute;
+            font-weight: bolder;
         }
         .search-box{
             float: left;
-            left:14%;
-            width: 18%;
+            left:40%;
             float: left;
-            margin-top: 37px;
-            position: relative;
+            margin-top: 42px;
+            position: absolute;
         }
         .head{
             float: left;
@@ -34,13 +34,14 @@
         }
         .button{
             float:right;
+            left: 85%;
             right:10%;
-            margin-top: 37px;
-            position: relative;
+            margin-top: 30px;
+            position: absolute;
         }
         .table1{
-            border: 5px solid blueviolet;
-            background-color: blueviolet;
+            border: 5px solid pink;
+            background-color: pink;
             opacity: 1;
             width: 100%;
             font-weight: bolder;
@@ -48,7 +49,7 @@
         }
         #title1{
             height: 50px;
-            color: blueviolet;
+            color: rgb(206, 34, 206);
             margin-top:50px;
             font-size: large;
         }
@@ -65,7 +66,7 @@
             height: 100%;
             z-index: 9999;
             margin-top: 25px;
-            width:15%;
+            width:20%;
         }
         #upload{
             top: 60%;
@@ -78,9 +79,9 @@
             width: 100%;
         }
         #demo7{
-            bottom: 20px;
+            bottom: 50px;
             position: absolute;
-            left: 7%;
+            left: 14%;
         }
         p{
             top:30px;
@@ -90,6 +91,44 @@
             font-size: larger;
             position: absolute;
             font-style:oblique;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            color: fuchsia;
+        }
+        a{ font-size: 15px;
+            list-style: none; 
+            text-decoration: none;
+            background-color:pink; 
+            width: 80px; 
+            text-align: center; 
+            border: 1px solid pink; 
+            border-radius: 5px; /*圆角*/
+            margin-top: 2px;
+        } 
+        a{
+            display: block;
+        }
+        #left a{
+            font-size: 15px;
+            list-style: none; 
+            text-decoration: none;
+            background-color:pink; 
+            width: 100px; 
+            text-align: center; 
+            border: 3px solid pink; 
+            border-radius: 0px; /*圆角*/
+            margin-top: 7px;
+        } 
+        #right a{
+            font-size: 15px;
+            list-style: none; 
+            text-decoration: none;
+            background-color:pink; 
+            width: 100px; 
+            text-align: center; 
+            border: 3px solid pink; 
+            border-radius: 0px; /*圆角*/
+            margin-top: 7px;
         }
     </style>
     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
@@ -109,7 +148,7 @@
 <div class="wrap">
             <div class="head">
                 <div class="logo"><img src="/img/logo.jpg" alt="logo" height=80px;></div>
-                   <h1 id="name">正能量加油站</h1>
+                   <h2 id="name">正能量加油站</h2>
                 <div class="search-box">
                     <input type="search" placeholder="I LOVE IU"/>
                 </div>
@@ -125,9 +164,9 @@
                             <td><ul id="father">
                                 <li><a class="daohang1" href="#">首页</a>
                                     <ul id="son">
-                                        <li><a class="daohang1" href="#">宝藏分享</a></li>
+                                        <li><a class="daohang1" href="#">明星动态</a></li>
                                         <li><a class="daohang1" href="#">换装视频</a></li>
-                                        <li><a  class="daohang1"href="#">历史军事</a></li>
+                                        <li><a  class="daohang1"href="#">历史军</a></li>
                                         <li><a class="daohang1" href="#">娱乐段子</a></li>
                                         <li><a  class="daohang1"href="#">乡村故事</a></li>
                                         <li><a  class="daohang1"href="http://www.zongheng.com/category/15.html" >游戏教学</a></li>
@@ -161,14 +200,11 @@
                             <td><ul id="father">
                                 <li><a href="#">分类</a>
                                     <ul id="son">
-                                        <li><a href="#">奇幻玄幻</a></li>
-                                        <li><a href="#">武侠仙侠</a></li>
-                                        <li><a href="#">历史军事</a></li>
-                                        <li><a href="#">都市娱乐</a></li>
-                                        <li><a href="#">竞技同人</a></li>
-                                        <li><a href="http://www.zongheng.com/category/15.html" >科幻游戏</a></li>
-                                        <li><a href="http://www.zongheng.com/category/18.html" >悬疑灵异</a></li>
-                                        <li><a href="http://www.zongheng.com/category/40.html" >二次元</a></li>
+                                        <li><a href="shiyan.html">古风</a></li>
+                                        <li><a href="jijia.html">机甲</a></li>
+                                        <li><a href="index.html">可爱</a></li>
+                                        <li><a href="#">故事</a></li>
+                                        <li><a href="#">游戏</a></li>
                                     </ul>
                                 </li>
                             </ul></td>
@@ -215,7 +251,7 @@
           <div><video id="video1" src="video/lunbo1.mp4" controls autoplay loop width="100%" height="100%"></video></div>
         </div>
         <!-- <audio src="video/xia.mp3" loop autoplay preload="auto"></audio> -->
-        <input type="button" onclick="window.open('shiyan.html','_self')" value="521"/>
+        <input class="layui-btn layui-btn-normal layui-btn-radius" type="button" onclick="window.open('shiyan.html','_self')" value="换个风格"/>
     </div>
         <script src="/layui/layui.js"></script>
         <script>
@@ -224,7 +260,7 @@
             //建造实例
             carousel.render({
                 elem: '#test2'
-                ,width: '50%'
+                ,width: '40%'
                 ,height:'350px' //设置容器宽
                 ,arrow: 'hover' //始终显示箭头
                 //,anim: 'updown' //切换动画方式
@@ -284,7 +320,7 @@
         //完整功能
         laypage.render({
                 elem: 'demo7'
-                ,count: 100
+                ,count: 50
                 ,layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
                 ,jump: function(obj){
                 console.log(obj)
@@ -309,7 +345,7 @@
         });
     </script>
 </div>
-<div id=win style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px;
+<div id=win style="display:none; POSITION:absolute; left:50%;top:55%; width:600px; height:300px; margin-left:-300px;
              margin-top:-200px; border:5px solid #888; background-color:whitesmoke;opacity: 0.8; text-align:center">
             <div id="title1">
                 正能量加油站
@@ -323,7 +359,7 @@
                         pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" />
                     <br/><br/><br/><br/>
                     <input type="button" id="login" class="layui-btn" onclick="welcome()" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="button" id="login" class="layui-btn" onclick="location='reg.html'" value="注册"><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <input type="button" id="login" class="layui-btn" onclick="location='reg.html'" value="注册"><br/><br/><br/><br/>
                     <a href="javascript:closeLogin();">关闭登录框</a>
             </div>
                 <script>
