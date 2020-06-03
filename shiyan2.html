@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="content">    <form id="form1" runat="server">      <label>选择文件：</label>      <input type='text' name='textfield' id='fileName' class='txt' />      <input type='button'  onClick="xx();" class='btn' value='浏览' />      <asp:FileUpload ID="fileField" runat="server" CssClass="file" />           <p id="errMsg">        <asp:Label ID="errLabel" runat="server" Text=""></asp:Label>             </p>      <p id="tip"><span class="title">提示：</span>      <span>1.仅支持.jpg,.png.gif格式的图像文件;</span>      <span>2.上传文件的大小不要超过500kb;</span>      <span>3.为保证展示效果，建议使用高宽比为4:3的图片.</span>      </p>      <asp:Button ID="SubmitUpload" runat="server" Text="上 传" CssClass="submit"             onclick="SubmitUpload_Click"  />    </form> </div>
+</body>
+<script language="javascript"> function xx() {     document.getElementById("fileField").click();      } jQuery("#fileField").change(function(){  jQuery("#fileName").val(jQuery(this).val());  }); jQuery("#btn_close").click(function(){   if (window.top == window) {   window.close();  } else {    if(window.parent.UploadFilePanelCmt)    window.parent.UploadFilePanelCmt.hidePanel();  } }); $(document).ready(function(){  var tipMsg = jQuery("span#errLabel").text();  if(tipMsg.indexOf("文件上传成功")!=-1){     if(window.parent.UploadFilePanelCmt)    window.parent.UploadFilePanelCmt.hidePanel();  } }); </script>
+</html>
