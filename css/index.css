@@ -1,25 +1,30 @@
 .layui-carousel{
     float: left;
-    left: 10%;
+    
 }
 li a{
     text-decoration: none;
     color:black;
+
     
 }
 
 #son{
     display: none;
+    opacity: 0.8;
 }
 #father{
     float: left;
     margin-left: 1px;
+    
 }
 #father:hover #son{
     display: block;
     clear: both;position:absolute;z-index:999;
+    
 }
 #son li:hover>a{
     background-color: rgb(113, 177, 30);
+    
     
 }

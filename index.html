@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>正能量加油站</title>
+    <title>正能量加油站&nbsp;|&nbsp;娱乐</title>
     <style>
         .logo{
             left:1%;
@@ -45,7 +45,30 @@
             opacity: 1;
             width: 100%;
             font-weight: bolder;
-            text-align: center;
+            
+        }
+        td{
+            position: absolute;
+        }
+        #td1{
+            left: 50%;
+        }
+        #td2{
+            position: relative;
+            left: 130px;
+        }
+        #td3{
+            float: right;
+            right: 110px;
+            position: relative;
+        }
+        #td4{
+            position: relative;
+            left: 110px;
+        }
+        #td5{
+            position: relative;
+            left: 70px;
         }
         #title1{
             height: 50px;
@@ -53,35 +76,72 @@
             margin-top:50px;
             font-size: large;
         }
-        .lunbo{
-            width: 100%;
-        }
-        #right{
-            float:right;
-            height: 100%;
-            margin-top: 25px;
-        }
         #left{
             float: left;
             height: 100%;
             z-index: 9999;
-            margin-top: 25px;
-            width:20%;
+            margin-top: 20px;  
+        }
+        #video1{
+            float: left;
+            left: 20%;
+            width: 60%;
+            height: 330px;
+            top: 19%;
+            position: absolute;
+        }
+        #right{
+            float:right;
+            height: 100%;
+            margin-top: 20px;
         }
         #upload{
-            top: 60%;
+            top: 500px;
+            left: 10px;
             position:absolute;
         }
         #main{
-            top: 70%;
+            margin-top: 350px;
             position:absolute;
             z-index: 99999;
             width: 100%;
         }
-        #demo7{
-            bottom: 50px;
+        #lunbo2{
+            top: 580px;
             position: absolute;
-            left: 14%;
+            left: 4%;
+            color: red;
+            font-size: 20px;
+            width: 92%;
+            right: 4%;
+        }
+        #lunbo3{
+            top: 1050px;
+            position: absolute;
+            left: 4%;
+            color: orange;
+            font-size: 20px;
+            width: 92%;
+            right: 4%;
+        }
+        #video2{
+            width: 100%;
+            height: 100%;
+        }
+        #video3{
+            float: left;
+            left: 40%;
+            top:68px ;
+            height: 30%;
+            width: 15%;
+            position: absolute;
+        }
+        #video4{
+            position: absolute;
+            width: 35%;
+            float: left;
+            left: 2px;
+            height: 350px;
         }
         p{
             top:30px;
@@ -95,7 +155,7 @@
             letter-spacing: 2px;
             color: fuchsia;
         }
-        a{ font-size: 15px;
+        .table1 a{ font-size: 15px;
             list-style: none; 
             text-decoration: none;
             background-color:pink; 
@@ -104,10 +164,8 @@
             border: 1px solid pink; 
             border-radius: 5px; /*圆角*/
             margin-top: 2px;
-        } 
-        a{
             display: block;
-        }
+        } 
         #left a{
             font-size: 15px;
             list-style: none; 
@@ -118,24 +176,149 @@
             border: 3px solid pink; 
             border-radius: 0px; /*圆角*/
             margin-top: 7px;
+            display: block;
         } 
-        #right a{
+        #play{
+            float: right;
+            position: relative;
+            height: 30px;
+            left: -50px;
+            margin-right: 50px;
             font-size: 15px;
+            width: 100px; 
+            border-radius: 0px; /*圆角*/
+            margin-top: 7px;
+            display: block;
+            border-radius: 50px;                
+            background-color: rgb(63, 119, 58);
+            margin: 10px auto;
+        }
+        #content1 a{
+             font-size: 15px;
             list-style: none; 
             text-decoration: none;
             background-color:pink; 
-            width: 100px; 
+            width: 80px; 
             text-align: center; 
-            border: 3px solid pink; 
-            border-radius: 0px; /*圆角*/
-            margin-top: 7px;
+            border: 1px solid pink; 
+            border-radius: 5px; /*圆角*/
+            margin-top: 2px;
+            display: block;
+        }
+        #zhushi{
+            color: seagreen;
+            top: 50%;
+            left: 15%;
+            font-style: normal;
+            font-size: 15px;
+        }
+        .buttom {
+            top: 1500px;
+            margin-bottom: 50px;
+            position: absolute;
+            left: 30%;
+            font-size: larger;
+            font-weight: bolder;
+            
+        }
+        .buttom a{
+            color: rgb(221, 129, 23);
+            letter-spacing: 1px;
+            width: 100%;
+        }
+        #geci{
+            top: 25%;
+            left:50%;
+            right: 10%;
+            position: absolute;
+        }
+        #geci1{
+            position: absolute;
+        }
+        #geci2{
+            left: 20%;
+            position: absolute;
+        }
+        #geci3{
+            left: 30%;
+            position: absolute;
+        }
+        #geci4{
+            left: 50%;
+            position: absolute;
+        }
+        #geci5{
+            left: 60%;
+            position: absolute;
+        }
+        .ml2 {
+            font-weight: 900;
+         
+        }
+        .ml2 .letter {
+            display: inline-block;
+            
+        }
+        .ml16 {
+        color: #e63939;
+        padding: 40px 0;
+        font-weight: 800;
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        overflow: hidden;
+        
+        }
+        .ml16 .letter {
+        display: inline-block;
+        line-height: 1em;
+        }
+        /*隐藏原input*/
+        .upload-btn {
+            display: none;
+        }
+        /*美化自定义按钮*/
+        .file-input-trigger {
+            padding: 2px 5px;
+            border-radius: 5px;
+            border: 1px solid #3888C7;
+            background-color: #3888C7;
+            outline: none;
+            color: #fff;
+            cursor: pointer;
+        }
+        .file-name{
+            font-size: 10px;
+            text-align: left;
+            width: 200px;
+        }
+        #jianjie{
+            margin-top: 2%;
+            left: 37%;
+            position: absolute;
+            line-height: 40px;
+        }
+        #content2{
+            font-size: 16px;
+            text-indent: 30px;
+            letter-spacing: 2px;
+            color: rgb(187, 36, 36);
+        }
+        #jianjie1{
+            float: right;
+            position: relative;
+            height: 30px;
+            left: -10px;
+            margin-right: 50px;
+            font-size: 15px;
+            width: 100px; 
         }
     </style>
     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="/css/index.css" media="all">
     <script src="/bk/jquery-3.5.1.slim.min.js"></script>
     <script type="text/javascript" src="/layui/layui.js"></script>
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 <body>
     <script>
@@ -160,55 +343,34 @@
                 <table class="table1" >
                     <tr id="tr1">
                         <nav>
-                            <td></td>
-                            <td><ul id="father">
+                            <td id="td4"><ul id="father">
                                 <li><a class="daohang1" href="#">首页</a>
                                     <ul id="son">
-                                        <li><a class="daohang1" href="#">明星动态</a></li>
-                                        <li><a class="daohang1" href="#">换装视频</a></li>
-                                        <li><a  class="daohang1"href="#">历史军</a></li>
-                                        <li><a class="daohang1" href="#">娱乐段子</a></li>
-                                        <li><a  class="daohang1"href="#">乡村故事</a></li>
-                                        <li><a  class="daohang1"href="http://www.zongheng.com/category/15.html" >游戏教学</a></li>
-                                        <li><a  class="daohang1"href="http://www.zongheng.com/category/18.html" >原创动漫</a></li>
-                                        <li><a  class="daohang1"href="http://www.zongheng.com/category/40.html" >二次元</a></li>
+                                        <li><a class="daohang1" href="#"></a></li>
+                                        
                                     </ul>
                                 </li>
                             </ul></td>
-                            <td><ul id="father">
-                                <li><a href="#">热门视频</a>
-                                    <ul id="son">
-                                        <li><a href="#">奇幻玄幻</a></li>
-                                        <li><a href="#">武侠仙侠</a></li>
-                                        <li><a href="#">历史军事</a></li>
-                                        <li><a href="#">都市娱乐</a></li>
-                                        <li><a href="#">竞技同人</a></li>
-                                        <li><a href="http://www.zongheng.com/category/15.html" >科幻游戏</a></li>
-                                        <li><a href="http://www.zongheng.com/category/18.html" >悬疑灵异</a></li>
-                                        <li><a href="http://www.zongheng.com/category/40.html" >二次元</a></li>
-                                    </ul>
-                                </li>
-                            </ul></td>
-                            <td><ul id="father">
-                                <li><a href="#">热门作者</a>
+                            <td id="td5"><ul id="father">
+                                <li><a href="#">热门作品</a>
                                     <ul id="son">
                                         <li><a href="/detail/detail.html">JC.BOX陈莫甜</a></li>
                                         <li><a href="/detail/lumi.html">鹿米鹿米</a></li>
+                                        <li><a href="/detail/zzZ.html">zzZ</a></li>
+                                        <li><a href="/detail/zyx.html">郑钰熙</a></li>
                                     </ul>
                                 </li>
                             </ul><td>
-                            <td><ul id="father">
+                            <td id="td2"><ul id="father">
                                 <li><a href="#">分类</a>
                                     <ul id="son">
-                                        <li><a href="shiyan.html">古风</a></li>
+                                        <li><a href="gufeng.html">古风</a></li>
                                         <li><a href="jijia.html">机甲</a></li>
-                                        <li><a href="index.html">可爱</a></li>
-                                        <li><a href="#">故事</a></li>
-                                        <li><a href="#">游戏</a></li>
+                        
                                     </ul>
                                 </li>
                             </ul></td>
-                            <td><ul id="father">
+                            <td id="td3"><ul id="father">
                                 <li><a href="#">我的</a>
                                     <ul id="son">
                                         <li><a href="#">个人资料</a></li>
@@ -236,22 +398,81 @@
             </script>
 </div>
 <div id="left">
-    <a href="/img/98.jpg">宝藏分享</a>
-    <a href="/img/98.jpg">换装视频</a>
-    <a href="/img/98.jpg">历史军事</a>
-    <a href="/img/98.jpg">娱乐段子</a>
-    <a href="/img/98.jpg">游戏教学</a>
-    <a href="/img/98.jpg">原创动漫</a>
-    <a href="/img/98.jpg">二次元</a>
-    <a href="/img/98.jpg">ss</a>
+    
+    <input type="button" value="换装视频" onclick="detail()"/>
+    
 </div>
-<div class="lunbo">
+<div id="lunbo">
+    <video id="video1" src="video/lunbo1.mp4" controls   ></video> 
+</div>
+<div id="right">
+    
+    <p id="play">夏季备忘录
+        <audio id="audio" src="/video/xia.mp3"></audio>
+    </p><p id="jianjie1">听听音乐:</p>
+    <br/>
+    <script type="text/javascript">
+                var play=document.getElementById("play"); //取到p标签
+                
+               var audios=document.getElementById("audio");//取到audio标签
+              play.onclick=function(){
+               
+                if(audios.paused){  //进行判断，判断音乐是否在播放
+                audios.play();  //如果音乐是暂停的，点击播放
+             }else{
+                     audios.pause(); //如果音乐是播放的，点击暂停
+                 }
+            play.style.backgroundColor="yellow";
+              }
+       </script>
+</div>
+<div id="upload">
+    <form name="1" action="" method="GET"> 
+            上传视频:   
+            <input type="file" class="upload-btn">
+            <span type="text" class="file-input-trigger">选择文件</span>
+            <p class="file-name"></p>
+            <script src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+            <script>
+                $(function() {
+                    // 点击自定义的span标签触发input标签的点击事件
+                    $('.file-input-trigger').on('click', function() {
+                        $('.upload-btn').trigger('click')
+                    })
+                    // 文件改变时 将文件名称显示到p元素中
+                    $('.upload-btn').on('change', function(event) {
+                        var fileName = '已选文件：' + event.target.files[0].name
+                        $('.file-name').text(fileName)
+                    })
+                })
+                </script>
+    </form>
+</div>
+<div id="main">
+    <!-- <input type="button" value="作品详情" onclick="detail()"/> -->
+    <p class="ml12">你若盛开，清风徐来-</p>
+    <script>
+        function detail(){
+            layer.open({
+            skin: 'demo-class',
+            area: ['80%', '90%'],
+            anim: 5,
+            type: 2, 
+            content:[ '/lunbo/huanzhuang.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+        }
+    </script>
+</div>
+<div id="lunbo2">
+    <h3>猜你喜欢</h3>
+    <hr class="layui-bg-red">
     <div class="layui-carousel" id="test2" >
         <div carousel-item id="lb1">
-          <div><video id="video1" src="video/lunbo1.mp4" controls autoplay loop width="100%" height="100%"></video></div>
+          <div><video id="video2" src="video/mangzhong.mp4"  controls  ></video></div>
+          <div><video id="video2" src="/video/ppx.mp4"   controls ></video></div>
+          <div><video id="video2" src="/video/cl.mp4"   controls ></video></div>
         </div>
         <!-- <audio src="video/xia.mp3" loop autoplay preload="auto"></audio> -->
-        <input class="layui-btn layui-btn-normal layui-btn-radius" type="button" onclick="window.open('shiyan.html','_self')" value="换个风格"/>
     </div>
         <script src="/layui/layui.js"></script>
         <script>
@@ -260,90 +481,44 @@
             //建造实例
             carousel.render({
                 elem: '#test2'
-                ,width: '40%'
+                ,width: '35%'
                 ,height:'350px' //设置容器宽
-                ,arrow: 'hover' //始终显示箭头
+                ,arrow: 'always' //始终显示箭头
                 //,anim: 'updown' //切换动画方式
-                ,interval:'1000000'
+                ,interval:'105000'
                 ,indicator:'inside'
             });
             });   
         </script>
+    <!-- <div id="geci" class="ml12">
+        <span id="geci1" >一想到你我就<br/></span><br/><br/><br/>
+        <span id="geci2" >Wu~</span><br/><br/><br/>
+        <span id="geci3" >空恨别梦久</span><br/><br/><br/>
+        <span id="geci4" >Wu~</span><br/><br/><br/>
+        <span id="geci5" >烧去纸灰埋烟柳</span><br/><br/><br/>
+    </div> -->
 </div>
-<div id="right">
-    <a href="/img/98.jpg">ss</a>
-    <a href="/img/98.jpg">ss</a>
-    <a href="/img/98.jpg">ss</a>
-    <a href="/img/98.jpg">ss</a>
-    <a href="/img/98.jpg">ss</a>
-    <a href="/img/98.jpg">ss</a>
-    <a href="/img/98.jpg">ss</a>
-    <a href="/img/98.jpg">ss</a>
-   
+<div id="lunbo3">
+    <h3>好剧推荐</h3>
+    <hr class="layui-bg-orange">
+    <div>
+    <video id="video4" src="/video/csmz.mp4"   controls  ></div>
+    <div id="jianjie" class="ml12">
+        <span class="ml16">1.沉睡魔咒</span><br/>
+        <span id="content2" class="ml12">&nbsp;&nbsp;&nbsp;该片主要讲述了美丽纯洁的玛琳菲森自小与斯特凡相识相爱，
+            后又被他背叛破坏自己守护的森林，从而开始一系列的复仇计划，
+            最终理解真爱，学会宽恕的成长故事。
+        </span>
+    </div>
 </div>
-<div id="upload">
-    <button type="button" class="layui-btn" id="test5">
-        <i class="layui-icon"></i>上传视频</button>
-    <script>
-        upload.render({
-        elem: '#test5'
-        ,url: 'http://127.0.0.1:5500/text.php' 
-        ,accept: 'video' //视频
-        ,done: function(res){
-        layer.msg('上传成功');
-        console.log(res)
-            }
-        });
-  
-    </script>
-</div>
-<div id="main">
-    <input type="button" value="作品详情" onclick="detail()"/>
-    <p>你若盛开，清风徐来-</p>
-    <script>
-        function detail(){
-            layer.open({
-            skin: 'demo-class',
-            area: ['80%', '80%'],
-            anim: 5,
-            type: 2, 
-            content: '/detail/detail.html', //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
-            }); 
-        }
-    </script>
-</div>
-<div id="demo7">
-    <script>
-        layui.use(['laypage', 'layer'], function(){
-        var laypage = layui.laypage
-        ,layer = layui.layer;
-        //完整功能
-        laypage.render({
-                elem: 'demo7'
-                ,count: 50
-                ,layout: ['count', 'prev', 'page', 'next', 'limit', 'refresh', 'skip']
-                ,jump: function(obj){
-                console.log(obj)
-                }
-            });
-                                //调用分页
-        laypage.render({
-            elem: 'demo20'
-            ,count: data.length
-            ,jump: function(obj){
-            //模拟渲染
-            document.getElementById('biuuu_city_list').innerHTML = function(){
-                var arr = []
-                ,thisData = data.concat().splice(obj.curr*obj.limit - obj.limit, obj.limit);
-                layui.each(thisData, function(index, item){
-                arr.push('<li>'+ item +'</li>');
-                });
-                return arr.join('');
-            }();
-            }
-        });
-        });
-    </script>
+<div class="buttom">
+        <a href="">娱乐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="">舞蹈&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a  href="">电影&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="">搞笑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="">音乐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a  href="">游戏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="">综艺&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>     
 </div>
 <div id=win style="display:none; POSITION:absolute; left:50%;top:55%; width:600px; height:300px; margin-left:-300px;
              margin-top:-200px; border:5px solid #888; background-color:whitesmoke;opacity: 0.8; text-align:center">
@@ -376,5 +551,108 @@
                     }
                 </script>  
 </div>
+<script type="text/javascript">
+    // 获取所有audios
+    var videos = document.getElementsByTagName("video");
+    // 暂停函数
+    function pauseAll() {
+        var self = this;
+        [].forEach.call(videos, function(i) {
+            // 将audios中其他的audio全部暂停
+            i !== self && i.pause();
+        })
+    }
+    // 给play事件绑定暂停函数
+    [].forEach.call(videos, function(i) {
+        i.addEventListener("play", pauseAll.bind(i));
+    })
+    var videoAll = $(".J_catVideo");
+        videoAll.on("click",function(){
+            var cindex = videoAll.index(this);
+            videoAll.each(function (i) {
+                var video = $(this).find('video')[0];
+                if (i == cindex) {
+                    if (video.paused) {
+                        $(this).find(".J_videoPic").hide();
+                        video.play();
+                    } else {
+                        $(this).find(".J_videoPic").show();
+                        video.pause();
+                    }
+                }else{
+                    if (!video.paused) {
+                        $(this).find(".J_videoPic").show();
+                        video.pause();
+                    }
+                }
+            })
+        })
+</script>
+<script>
+        // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml12');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+    anime.timeline({loop: true})
+      .add({
+        targets: '.ml12 .letter',
+        scale: [4,1],
+        opacity: [0,1],
+        translateZ: 0,
+        easing: "easeOutExpo",
+        duration: 10000,
+        delay: (el, i) => 70*i
+      }).add({
+        targets: '.ml12',
+        opacity: 0,
+        duration: 3000,
+        easing: "easeOutExpo",
+        delay: 3000
+      });
+        // Wrap every letter in a span
+    var textWrapper = document.querySelector('.ml16');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+    .add({
+        targets: '.ml16 .letter',
+        translateY: [-50,0],
+        easing: "easeOutExpo",
+        duration: 1400,
+        delay: (el, i) => 30 * i
+    }).add({
+        targets: '.ml16',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 3000
+    });
+</script>
+<script>
+        // 创建音频上下文  
+    var audioCtx = new AudioContext();
+    // 创建音调控制对象  
+    var oscillator = audioCtx.createOscillator();
+    // 创建音量控制对象  
+    var gainNode = audioCtx.createGain();
+    // 音调音量关联  
+    oscillator.connect(gainNode);
+    // 音量和设备关联  
+    gainNode.connect(audioCtx.destination);
+    // 音调类型指定为正弦波  
+    oscillator.type = 'sine';
+    // 设置音调频率  
+    oscillator.frequency.value = 596.00;
+    // 先把当前音量设为0  
+    gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+    // 0.01秒时间内音量从刚刚的0变成1，线性变化 
+    gainNode.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 0.00001);
+    // 声音走起 
+    oscillator.start(audioCtx.currentTime);
+    // 1秒时间内音量从刚刚的1变成0.001，指数变化 
+    gainNode.gain.exponentialRampToValueAtTime(0.000001, audioCtx.currentTime + 1.2);
+    // 1秒后停止声音 
+    oscillator.stop(audioCtx.currentTime + 1);
+</script>
 </body>
 </html>
