@@ -166,17 +166,14 @@
             margin-top: 2px;
             display: block;
         } 
-        #left a{
+        #left input{
             font-size: 15px;
-            list-style: none; 
-            text-decoration: none;
-            background-color:pink; 
+            background-color: rgb(243, 43, 233);
             width: 100px; 
             text-align: center; 
-            border: 3px solid pink; 
-            border-radius: 0px; /*圆角*/
+            border: 3px solid rgb(206, 34, 206);
+            border-radius: 10px; /*圆角*/
             margin-top: 7px;
-            display: block;
         } 
         #play{
             float: right;
@@ -401,7 +398,19 @@
 </div>
 <div id="left">
     
-    <input type="button" value="换装视频" onclick="detail()"/>
+    <input type="button" value="换装视频" onclick="detail()"/><br/>
+    <input type="button" value="体育篮球" onclick="detail1()"/>
+    <script>
+        function detail1(){
+            layer.open({
+            skin: 'demo-class',
+            area: ['80%', '90%'],
+            anim: 5,
+            type: 2, 
+            content:[ '/lunbo/tiyu.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+        }
+    </script>
     
 </div>
 <div id="lunbo">
@@ -470,9 +479,9 @@
     <hr class="layui-bg-red">
     <div class="layui-carousel" id="test2" >
         <div carousel-item id="lb1">
+          <div><video id="video2" src="/video/cl.mp4"   controls ></video></div>
           <div><video id="video2" src="video/mangzhong.mp4"  controls  ></video></div>
           <div><video id="video2" src="/video/ppx.mp4"   controls ></video></div>
-          <div><video id="video2" src="/video/cl.mp4"   controls ></video></div>
         </div>
         <!-- <audio src="video/xia.mp3" loop autoplay preload="auto"></audio> -->
     </div>
