@@ -67,7 +67,7 @@
                     ,height:'600px' //设置容器宽
                     ,arrow: 'always' //始终显示箭头
                     //,anim: 'updown' //切换动画方式
-                    ,interval:'11500'
+                    ,interval:'110500'
                     ,indicator:'inside'
                 });
                 });   
@@ -108,6 +108,25 @@
                             }
                         })
                     })
+            </script>
+            <script type="text/javascript">
+                debugger;
+                var vList = [ '/video/huanzhuang1.mp4', '/video/huanzhuang2.mp4' ]; // 初始化播放列表 var
+                vLen = vList.length; // 播放列表的长度
+                var curr = 0; // 当前播放的视频 
+                var video = document.getElementById("video2");
+                video.addEventListener('ended', play);
+                play();
+                function play() {
+                    var video = document.getElementById("video2");
+                    video.src = vList[curr];
+                    video.load(); //如果短的话，可以加载完成之后再播放，监听 canplaythrough 事件即可
+                    video.play();
+                    curr++;
+                    if (curr >= vLen)
+                        curr = 0;
+                        setTimeout(3000); // 播放完了，重新播放
+                }
             </script>
     </div>
 </body>
