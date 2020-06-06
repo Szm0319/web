@@ -111,7 +111,7 @@
             </script>
             <script type="text/javascript">
                 debugger;
-                var vList = [ '/video/huanzhuang1.mp4', '/video/huanzhuang2.mp4' ]; // 初始化播放列表 var
+                var vList = [ '/video/huanzhuang2.mp4', '/video/huanzhuang1.mp4' ]; // 初始化播放列表 var
                 vLen = vList.length; // 播放列表的长度
                 var curr = 0; // 当前播放的视频 
                 var video = document.getElementById("video2");
@@ -124,8 +124,7 @@
                     video.play();
                     curr++;
                     if (curr >= vLen)
-                        curr = 0;
-                        setTimeout(3000); // 播放完了，重新播放
+                        curr = 0;// 播放完了，重新播放
                 }
             </script>
     </div>
