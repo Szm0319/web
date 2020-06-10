@@ -303,7 +303,7 @@
             font-size: 15px;
             width: 100px; 
         }
-
+        
     </style>
     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="/css/index.css" media="all">
@@ -361,10 +361,6 @@
                                         <ul id="son">
                                             <li><a href="/person/dsmj.html">等什么君</a></li>
                                             <li><a href="/person/lfcz.html">拉夫船长</a></li>
-                                            <li><a href="/detail/zzZ.html"></a></li>
-                                            <li><a href="/detail/zyx.html"></a></li>
-                                            <li><a href="/detail/HoneyCC.html"></a></li>
-                                            <li><a href="/detail/dc.html"></a></li>
                                         </ul>
                                     </li>
                                 </ul><td>
@@ -372,9 +368,7 @@
                                 <td id="td2"><ul id="father">
                                     <li><a href="#lunbo2">分类</a>
                                         <ul id="son">
-                                            <li><a href="gufeng.html">古风</a></li>
-                                            <li><a href="jijia.html">机甲</a></li>
-                                            <li><a href="#">少年励志</a></li>
+                                            <li><a href="/kinds/lizhi.html" target="_self">少年励志</a></li>
                                             <li><a href="/kinds/music.html">听听音乐</a></li>
                                             <li><a href="#">汉服魅力</a></li>
                                             <li><a href="/kinds/movie.html">热影推荐</a></li>
@@ -589,15 +583,34 @@
             <div id="content1">
                    用户名:
                     <input name="loginname" type="text" maxlength="12" required
-                         /><br/><br/><br/>
+                        id="loginname" /><br/><br/><br/>
                    密&nbsp;&nbsp;&nbsp码:
                     <input name="pass" type="password" maxlength="12" required
-                        pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" />
+                       id="loginpass" pattern="^(a)\d{5,8}$" placeholder="a开头5到8位数字" />
                     <br/><br/><br/><br/>
-                    <input type="button" id="login" class="layui-btn" onclick="welcome()" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="button" id="login" class="layui-btn" onclick="checkLogin()" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="button" id="login" class="layui-btn" onclick="location='reg.html'" value="注册"><br/><br/><br/><br/>
                     <a href="javascript:closeLogin();">关闭登录框</a>
             </div>
+            <script>
+                function checkLogin(){
+                    var name = document.getElementById("loginname").value;
+                    var pass = document.getElementById("loginpass").value;
+
+                    if(name=="" || pass ==""){
+                        layer.msg("啥都不填就登录？");
+                    }
+                    if(name == "admin" && pass == "a12315"){
+                        setTimeout("javascript:closeLogin();", 0);
+                        layer.msg("登陆成功");
+                        window.location.href='reg.html';
+                    }else{
+                        setTimeout("javascript:closeLogin();", 1000);
+                        setTimeout("layer.msg('登录失败');", 2500);
+
+                    }
+                }
+            </script>
                 <script>
                     function welcome(){
                         layer.msg('青春的日子里有你有我');
