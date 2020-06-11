@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拉夫船长的主页</title>
+    <style>
+        .head{
+            float: left;
+            width: 100%;
+            height: 100px;
+            background-color: rgb(34, 24, 24);
+            position: fixed;
+            background-attachment: scroll;
+            text-align: initial;
+            text-indent: 3em;
+            font-size: 2em;
+            opacity: 0.8;
+            z-index: 999;
+            font-weight: bolder;
+            color: rgb(124, 218, 69);
+        }
+        .bgimg{
+            float: left;
+            margin-left: 10%;
+            width: 100px;
+            height: 100px; 
+            }
+        table{
+            top: 100px;
+            position: absolute;
+            width: 100%;
+            border-collapse:separate;
+            border-spacing:0px 10px
+            
+        }
+        body{
+            
+            background-image: url(/img/lfcz.jpg);
+        }
+        #span1{
+            color: rgb(66, 29, 20);
+            font-size: 20px;
+            margin-top: 150px;
+            float: left;
+            position: absolute;
+            width: 400px;
+            letter-spacing: 5px;
+            line-height: 2em;
+            font-weight: bolder;
+        }
+        #span2{
+            color: rgb(66, 29, 20);
+            font-size: 20px;
+            margin-top: 150px;
+            float:right;
+            left: 30%;
+            position: absolute;
+            width: 400px;
+            letter-spacing: 5px;
+            font-weight: bolder;
+        }
+        .video1{
+            float: right;
+        }
+        .video2{
+            float: left;
+            margin-top: 20px;
+        }
+       
+    </style>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+     <script src="/bk/jquery-3.5.1.slim.min.js"></script>
+</head>
+<body>
+    <div class="head">
+        <img class="bgimg" src="/img/lfcztx.jpg">
+        <p class="ml12">拉夫船长</p>
+    </div>
+    <div class="main">
+        <table>
+            <tr>
+                <td>
+                    <video id="video" class="video1" src="/video/lfcz.mp4"  width="340px" height="600px%" autoplay preload="auto" controls></video>
+                    
+                </td>
+                <td><span id="span1">&nbsp;&nbsp;"我觉得我又行了" </span></td>
+            </tr>
+            <tr>
+                <td><span id="span2">"你可能不信，我躲开了" </span></td>
+                <td><video id="video" class="video2" src="/video/lfcz1.mp4" width="340px" height="600px" autoplay controls></video></td>
+            </tr>
+            <tr>
+                <td><video id="video" class="video1" src="/video/lfcz2.mp4" width="340px" height="600px" autoplay controls></video></td>
+                <td><span id="span1">&nbsp;&nbsp;"听声辨位"</span></td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            // 获取所有audios
+            var videos = document.getElementsByTagName("video");
+            // 暂停函数
+            function pauseAll() {
+                var self = this;
+                [].forEach.call(videos, function(i) {
+                    // 将audios中其他的audio全部暂停
+                    i !== self && i.pause();
+                })
+            }
+            // 给play事件绑定暂停函数
+            [].forEach.call(videos, function(i) {
+                i.addEventListener("play", pauseAll.bind(i));
+            })
+            var videoAll = $(".J_catVideo");
+                videoAll.on("click",function(){
+                    var cindex = videoAll.index(this);
+                    videoAll.each(function (i) {
+                        var video = $(this).find('video')[0];
+                        if (i == cindex) {
+                            if (video.paused) {
+                                $(this).find(".J_videoPic").hide();
+                                video.play();
+                            } else {
+                                $(this).find(".J_videoPic").show();
+                                video.pause();
+                            }
+                        }else{
+                            if (!video.paused) {
+                                $(this).find(".J_videoPic").show();
+                                video.pause();
+                            }
+                        }
+                    })
+                })
+        </script>
+            <script type="text/javascript">
+                debugger;
+                var vList = [ '/video/lfcz.mp4', '/video/lfcz1.mp4','/video/lfcz2.mp4' ]; // 初始化播放列表 var
+                vLen = vList.length; // 播放列表的长度
+                var curr = 0; // 当前播放的视频 
+                var video = document.getElementById("video");
+                video.addEventListener('ended', play);
+                play();
+                function play() {
+                    var video = document.getElementById("video");
+                    video.src = vList[curr];
+                    video.load(); //如果短的话，可以加载完成之后再播放，监听 canplaythrough 事件即可
+                    video.play();
+                    curr++;
+                    if (curr >= vLen)
+                        curr = 0; // 播放完了，重新播放
+                }
+            </script>
+            <script>
+                var textWrapper = document.querySelector('.ml12');
+                textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+                
+                anime.timeline({loop: true})
+                .add({
+                    targets: '.ml12 .letter',
+                    scale: [4,1],
+                    opacity: [0,1],
+                    translateZ: 0,
+                    easing: "easeOutExpo",
+                    duration: 5000,
+                    delay: (el, i) => 70*i
+                }).add({
+                    targets: '.ml12',
+                    opacity: 0,
+                    duration: 3000,
+                    easing: "easeOutExpo",
+                    delay: 3000
+                });
+            </script>
+    </div>
+</body>
+</html>

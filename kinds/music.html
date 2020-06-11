@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听听音乐</title>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+		
+
+        }
+        h1{
+            left: 42%;
+            margin-top: 50px;
+            font-size: 60px;
+            letter-spacing: 36px;
+            position: fixed;
+        }
+
+		.text-effect{
+		    color: #ffff00;
+		    font-family: 'Cabin Sketch', cursive;
+		    font-size: 50px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    margin: 0 auto;
+		    position: relative;
+		}
+		.text-effect span{
+		    display: inline-block;
+		    animation: animate 0.5s linear infinite both;
+		}
+		.text-effect span:nth-child(1),
+		.text-effect span:nth-child(4),
+		.text-effect span:nth-child(7),
+		.text-effect span:nth-child(10){
+		   color: #4cd137;
+		}
+		.text-effect span:nth-child(2),
+		.text-effect span:nth-child(5),
+		.text-effect span:nth-child(8){
+		   color: #ff0000;
+		}
+
+        #main{
+            margin-top:-14%;
+            position: absolute;
+        }
+		audio{
+			display: none;
+		}
+		#xiaotu{
+			width: 1800px;
+			height: 100%;
+		}
+		#xiaotu2{
+			width: 2100px;
+			height: 100%;
+		}
+		#b1{
+		left: -1450px;
+		border-radius: 6rem;
+		width: 80px;
+		height: 80px;
+		background-color: white;
+		margin-top: -360px;
+		position: absolute;
+		}
+		#p1{
+			color: white;
+			font-size: 13px;
+			left: -1420px;
+			margin-top: -280px;
+			position: absolute;
+	
+		}	
+
+	</style>
+
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/default.css">
+	</head>
+<body>
+    <div id="app" data-state="0">
+		<div class="ui-big-images">    
+		  <div class="ui-big-image" data-key="0">
+			<img src="https://img.zcool.cn/community/01856d5dddd854a80120686b585879.jpg@1280w_1l_2o_100sh.jpg" alt="" onclick="bofang1()"/>
+			<audio  id="audio1" src="/video/mwgq.mp3"></audio>
+			<script>
+				function bofang1(){
+					audio1.play()
+				}
+			</script>
+		  </div>
+		  <div class="ui-big-image" data-key="1">
+			<img src="/img/spz.jpg" alt="" onclick="bofang2()"/>
+			<audio  id="audio2" src="/video/spz.mp3"></audio>
+			<script>
+				function bofang2(){
+					audio2.play()
+				}
+			</script>
+		  </div>
+		  <div class="ui-big-image" data-key="2">
+			<img src="/img/xiashan.jpg" alt="" onclick="bofang3()"/>
+			<audio id="audio3" src="/video/xiashan.mp3"></audio>
+			<script>
+				function bofang3(){
+					audio3.play()
+				}
+			</script>
+		  </div>
+		  <div class="ui-big-image" data-key="3">
+			<img src="http://img.zcool.cn/community/01d9a35770d9790000012e7ed2fea3.jpg@1280w_1l_2o_100sh.jpg" alt="onclick="bofang3()"/>
+			<audio id="audio4" src="/video/xtdf.mp3"></audio>
+			<script>
+				function bofang4(){
+					audio4.play()
+				}
+			</script>
+		  </div>
+		</div>
+		<div class="ui-thumbnails">
+		  <div class="ui-thumbnail" tabindex="-1" data-key="0">
+			<img src="https://img.zcool.cn/community/01856d5dddd854a80120686b585879.jpg@1280w_1l_2o_100sh.jpg" id="xiaotu" alt=""  onclick="bofang1()"/>
+			<script>
+				function bofang1(){
+					audio1.play()
+				}
+			</script>
+			<div class="ui-cuticle" data-flip-key="cuticle"></div>
+		  </div>
+		  <div class="ui-thumbnail" tabindex="-1" data-key="1">
+			<img src="/img/spz.jpg"  id="xiaotu" alt="" onclick="bofang2()"/>
+			<script>
+				function bofang2(){
+					audio2.play()
+				}
+			</script>
+			<div class="ui-cuticle" data-flip-key="cuticle"></div>
+		  </div>
+		  <div class="ui-thumbnail" tabindex="-1" data-key="2">
+			<img src="/img/xiashan.jpg"  id="xiaotu" alt="" onclick="bofang3()"/>
+			<script>
+				function bofang3(){
+					audio3.play()
+				}
+			</script>
+			<div class="ui-cuticle" data-flip-key="cuticle"></div>
+		  </div>
+		  <div class="ui-thumbnail" tabindex="-1" data-key="3">
+			<img src="http://img.zcool.cn/community/01d9a35770d9790000012e7ed2fea3.jpg@1280w_1l_2o_100sh.jpg"
+			id="xiaotu2" onclick="bofang4()" alt=""/>
+			<script>
+				function bofang4(){
+					audio4.play()
+				}
+			</script>
+			<div class="ui-cuticle" data-flip-key="cuticle"></div>
+		  </div>
+		</div>
+		<div class="ui-content">
+		  
+		  <nav class="ui-nav">
+			<button id="prev" tabindex="-1" title="Previous">&lt;</button>
+			<button id="next" tabindex="-1" title="Next">&gt;</button>
+		  </nav>
+		  
+		  <div class="ui-articles">
+			<article class="ui-article" data-key="0">
+			  <h2 class="ui-heading">莫问归期</h2>
+			  <p class="ui-paragraph">蒋雪儿</p>
+			</article>
+			<article class="ui-article" data-key="1">
+			  <h2 class="ui-heading">生僻字</h2>
+			  <p class="ui-paragraph">陈柯宇</p>
+			</article>
+			<article class="ui-article" data-key="2">
+			  <h2 class="ui-heading">下山</h2>
+			  <p class="ui-paragraph">要不要买菜 </p>
+			</article>
+			<article class="ui-article" data-key="3">
+			  <h2 class="ui-heading">夏天的风</h2>
+			  <p class="ui-paragraph">Uu</p>
+			</article>
+		  </div>
+		</div>
+	</div>
+	<div>
+		<button id="b1" onclick="location='/index.html'"><img src="/img/logo.jpg" width="30px" height="30px"></button>
+		<p id="p1">主页</p>
+	</div>
+  <script src='https://unpkg.com/flipping@1.1.0/dist/flipping.web.js'></script>
+  <script>
+	  console.clear();
+
+	  const elPrevButton = document.querySelector('#prev');
+	  const elNextButton = document.querySelector('#next');
+	  const flipping = new Flipping();
+
+	  const elImages = Array.from(document.querySelectorAll('.ui-big-image'));
+	  const elThumbnails = Array.from(document.querySelectorAll('.ui-thumbnail'));
+
+	  let state = {
+		photo: 0
+	  };
+
+	  function send(event) {
+		// read cuticle positions
+		flipping.read();
+		
+		const elActives = document.querySelectorAll('[data-active]');
+		
+		Array.from(elActives)
+		  .forEach(el => el.removeAttribute('data-active'));
+
+		switch (event) {
+		  case 'PREV':
+			state.photo--;
+			// Math.max(state.photo - 1, 0);
+			break;
+		  case 'NEXT':
+			state.photo++;
+			// Math.min(state.photo + 1, elImages.length - 1);
+			break;
+		  default:
+			state.photo = +event;
+			break;
+		}
+		
+		var len = elImages.length;
+		// Loop Around
+		//state.photo = ( ( state.photo % len) + len ) % len;
+		state.photo = Math.max(0, Math.min( state.photo, len - 1) );
+
+		Array.from(document.querySelectorAll(`[data-key="${state.photo}"]`))
+		  .forEach( el => {
+		  el.setAttribute('data-active', true);
+		});
+		
+		// execute the FLIP animation
+		flipping.flip();
+	  }
+
+	  elThumbnails.forEach( thumb => { 
+		thumb.addEventListener('click', () => {
+		  send(thumb.dataset.key);
+		});
+	  });
+
+	  elPrevButton.addEventListener('click', () => {
+		send('PREV');
+	  });
+
+	  elNextButton.addEventListener('click', () => {
+		send('NEXT');
+	  });
+
+	  send(0);
+  </script>
+
+    <div class="demo" style="min-height:300px;" id="main">
+            <div class="container">
+	            <div class="row">
+	                <div class="col-md-12">
+	                    <div class="text-effect">
+	                        <span>L</span>i<span>s</span><span>t</span><span>e</span><span>n</span>
+	                        <span>m</span>u<span>s</span>i<span>c</span>
+                        </div>
+                    </div>
+	            </div>
+	        </div>
+	</div>
+
+	<script type="text/javascript">
+
+		var audios = document.getElementsByTagName("audio");
+		// 暂停函数
+		function pauseAll() {
+		    var self = this;
+		    [].forEach.call(audios, function (i) {
+		        // 将audios中其他的audio全部暂停
+		        i !== self && i.pause();
+		    })
+		}
+		// 给play事件绑定暂停函数
+		[].forEach.call(audios, function (i) {
+		    i.addEventListener("play", pauseAll.bind(i));
+		})
+
+	</script>
+</body>
+</html>
