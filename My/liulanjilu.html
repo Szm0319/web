@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="科学怪人CSS.css">
+    <title>正能量加油站||个人信息</title>
+    <style>
+       body{
+        background-color: rgb(197, 186, 82);
+            background-image: url(/img/back1.jpg);
+            background-size: 100%;
+		
+	}
+    .content{
+        display: flex;
+        margin-top: 60px;
+        justify-content: space-around;
+        color: rgb(202, 160, 22);
+        flex-wrap: wrap;
+
+    }
+	.one,.two,.there{
+		width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+	}
+    .one{
+        order:0;
+        background: #EF8D32;
+        height: 200px;
+        
+       
+
+    }
+
+	.nav{
+		text-align: center;
+        color: rgb(238, 232, 232);
+	}
+	.one1{
+		width: 90%;
+		height:70px;
+        margin-top: 20px;
+		background: url(katong.png) no-repeat ;
+		border: 3px solid #E1DED6
+      
+	}
+	.one2{
+		width: 90%;
+		height: 70px;
+		background:  url(password.png) no-repeat ;
+		border: 3px solid #E1DED6;
+	}
+	.one3{width: 100%;
+		height: 80px;
+		background-color: #EF8D32;
+		margin-top:-10px;
+		color: white;
+        cursor:pointer;
+      
+	}
+	.two1 img{
+        margin-top: 5px;
+		width: 80%;
+		height: 80%;
+        border-radius: 30%;
+
+
+	}
+    .two1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color:  #ffffff;
+
+
+    }
+    .two2{
+        display: flex;
+
+        width: 100%;
+        height: 70px;
+        background-color: #EF8D32;
+        align-items: center;
+    }
+    .two2 div{
+        width: 100%;
+        margin-top: 8px;
+
+        text-align: center;
+        font-size: 14px;
+        color: #E1DED6;
+    }
+    .two2-one{
+        border-right: 1px solid white;
+    }
+    .text1{
+        font-size: 25px;
+        color: rgb(134, 133, 133);
+        margin-top: -10px;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        background-color: #FFFFFF;
+    }
+    .there1{width: 100%;
+        height: 50px;
+        background-color: #EF8D32;
+        border: 1px solid indianred;
+        color: white;
+        cursor:pointer;
+
+    }
+    .there-images1{
+        display: inline-block;
+
+        width:25px;
+        margin-top: 10px;
+        height: 25px;
+        background: url("img-sprite.png") no-repeat -1px 2px;
+    }
+    .there-images2{
+          display: inline-block;
+
+          width:25px;
+          margin-top: 10px;
+          height: 25px;
+          background: url("img-sprite.png") no-repeat -30px 2px;
+      }
+    .there-images3{
+            display: inline-block;
+            width:25px;
+            margin-top: 10px;
+            height: 25px;
+            background: url("img-sprite.png") no-repeat -60px 2px;
+        }
+    .there-images4{
+              display: inline-block;
+              width:25px;
+              margin-top: 10px;
+              height: 25px;
+              background: url("img-sprite.png") no-repeat -90px 2px;
+          }
+    .one3:hover{
+        background-color: #ee5a32;
+    }
+    .there1:hover{
+           background-color: #ee5a32;
+       }
+    button{
+        margin-top: 15px;
+        float: right;
+        background-color: #505771;
+        border-radius: 5px;
+        border: none;
+        margin-right: 3px;}
+    @media screen and (max-width: 500px) {
+        .one,.two,.there{
+            width: 100%;
+            margin-top: 10px;
+
+        }
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="nav"> <h1>个人信息</h1></div>
+   
+
+    <div class="content">
+        <div class="one">
+            <input type="text" class="one1" placeholder="         | 请输入旧的密码"><br>
+            <input type="text" class="one2" placeholder="         | 请输入新的密码"><br>
+            <button class="one3">修改密码</button>
+        </div>
+        <div class="two">
+            <div class="two1"><img src="/img/katong.jpg"></div>
+            <div class="text1"><p6>三号车队</p6></div>
+            <div class="two2">
+                <div class="two2-one">喜欢<br>18</div>
+                <div>关注<br>7</div>
+            </div>
+        </div>
+        <div class="there">
+            <div class="there1">
+                <span class="there-images1"> </span>
+                <span><p3>关注</p3></span>
+            </div>
+            <div class="there1">
+                <span class="there-images2"> </span>
+                <span><p3>粉丝</p3></span>
+                <button></button>
+            </div>
+            <div class="there1">
+                <span class="there-images3"> </span>
+                <sapn>设置</sapn>
+            </div>
+            <div class="there1">
+                <span class="there-images4"> </span>
+                <sapn>退出登录</sapn>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
