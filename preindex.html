@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        color: black;
+        background-image: url("/img/index.jpg");
+        background-size: 100%;
+    }
+    video{
+        float: left;
+        left: 15px;
+        height: 98%;
+        position: absolute;
+    }
+    input{
+        margin-top: 300px;
+        margin-right: 250px;
+        border-radius: 50px;
+        font-size: larger;
+        color: chocolate;
+        background-color: black;
+        width: 200px;
+        height: 50px;
+        float: right;
+    }
+    audio{
+        display: none;
+    }
+</style>
+<body>    
+    <video id="video1" src="/video/lisa.mp4" autoplay loop ></video>
+    <input type="button" value="点击进入主页" onclick="turn()"/>
+    <audio id="audio1" src="/video/laila.mp3" ></audio>
+    <script>
+        function turn(){
+            video1.pause();
+            audio1.play();
+            setTimeout("window.location.href='index.html'",3000);
+        }
+    </script>
+</body>
+</html>

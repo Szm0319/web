@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(12, 4, 20);
+        }
+        .logo{
+            left:10%;
+            float: left;
+            position: relative;
+            margin-top: 15px;
+        
+        }
+        #name{
+            float: left;
+            color: rgb(214, 210, 223);
+            margin-left:12%;
+            margin-top: 30px;
+            position: relative;
+        }
+        .head{
+            float: left;
+            height: 100px;
+            width:100%;
+            text-align: center;
+            top: 15%;
+            position: relative;
+        }
+        .content{
+            left:40%;
+            width: 30%;
+            position:absolute;
+        }
+        #name1{
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <script src="/bk/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="/layui/layui.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="logo"><img src="/img/logo.jpg" alt="logo" height=80px;></div>
+           <h1 id="name">正能量加油站</h1>
+    </div>
+    <div class="content">
+        <div class="layui-carousel" id="test2" >
+            <div carousel-item id="lb1">
+                <div><video id="video2" src="/video/basketball_caofao.mp4"  controls autoplay width="100%" height="100%"></video></div>
+              <div><video id="video2" src="/video/baolikoulan.MP4"  controls autoplay width="100%" height="100%"></video></div>
+            </div>
+            <!-- <audio src="video/xia.mp3" loop autoplay preload="auto"></audio> -->
+        </div>
+            <script src="/layui/layui.js"></script>
+            <script>
+                layui.use('carousel', function(){
+                var carousel = layui.carousel;
+                //建造实例
+                carousel.render({
+                    elem: '#test2'
+                    ,width: '100%'
+                    ,height:'600px' //设置容器宽
+                    ,arrow: 'always' //始终显示箭头
+                    //,anim: 'updown' //切换动画方式
+                    ,interval:'12000'
+                    ,indicator:'inside'
+                });
+                });   
+            </script>
+            <script type="text/javascript">
+                // 获取所有audios
+                var videos = document.getElementsByTagName("video");
+                // 暂停函数
+                function pauseAll() {
+                    var self = this;
+                    [].forEach.call(videos, function(i) {
+                        // 将audios中其他的audio全部暂停
+                        i !== self && i.pause();
+                    })
+                }
+                // 给play事件绑定暂停函数
+                [].forEach.call(videos, function(i) {
+                    i.addEventListener("play", pauseAll.bind(i));
+                })
+                var videoAll = $(".J_catVideo");
+                    videoAll.on("click",function(){
+                        var cindex = videoAll.index(this);
+                        videoAll.each(function (i) {
+                            var video = $(this).find('video')[0];
+                            if (i == cindex) {
+                                if (video.paused) {
+                                    $(this).find(".J_videoPic").hide();
+                                    video.play();
+                                } else {
+                                    $(this).find(".J_videoPic").show();
+                                    video.pause();
+                                }
+                            }else{
+                                if (!video.paused) {
+                                    $(this).find(".J_videoPic").show();
+                                    video.pause();
+                                }
+                            }
+                        })
+                    })
+            </script>
+    </div>
+</body>
+</html>
