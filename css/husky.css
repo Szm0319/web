@@ -1692,7 +1692,7 @@
   width: 100%;
 }
 .husky-lips:before, .husky-lips:after {
-  background: white;
+  background: rgb(255, 255, 255);
   width: calc(50% + 1.5px);
   border-color: #A3ADBB;
   border-width: 0.3vmin;
@@ -1775,18 +1775,18 @@
   left: 37%;
 }
 .husky-mane:before {
-  background: white;
+  background: rgb(190, 22, 22);
   height: 40%;
-  width: 100%;
+  width: 104px;
   border-top-left-radius: 10% 50%;
   border-top-right-radius: 20% 100%;
   border-bottom-left-radius: 10% 50%;
 }
 .husky-mane:after {
-  background: white;
+  background: #383B44;
   top: 25%;
   height: 76%;
-  width: 30%;
+  
   right: 23%;
   border-top-right-radius: 100% 80%;
   -webkit-transform: rotate(47deg);
@@ -1799,7 +1799,7 @@
   position: absolute;
   width: 50%;
   height: 50%;
-  background: white;
+  background: #383B44;
   -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
   left: 10%;
