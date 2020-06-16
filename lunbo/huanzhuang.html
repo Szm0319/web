@@ -1,12 +1,14 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>体育运动</title>
+    <title>Document</title>
     <style>
         body{
-            background-color: rgb(12, 4, 20);
+            background-color: rgb(168, 100, 231);
+            background-image: url(/img/katong2.jpg);
         }
         .logo{
             left:10%;
@@ -17,7 +19,7 @@
         }
         #name{
             float: left;
-            color: rgb(214, 210, 223);
+            color: rgb(238, 37, 37);
             margin-left:12%;
             margin-top: 30px;
             position: relative;
@@ -51,8 +53,8 @@
     <div class="content">
         <div class="layui-carousel" id="test2" >
             <div carousel-item id="lb1">
-                <div><video id="video2" src="/video/tiepi.MP4"  controls autoplay width="100%" height="100%"></video></div>
-              <div><video id="video2" src="/video/caomu.MP4"  controls autoplay width="100%" height="100%"></video></div>
+                <div><video id="video2" src="/video/huanzhuang2.mp4"  controls autoplay width="100%" height="100%"></video></div>
+              <div><video id="video2" src="/video/huanzhuang1.mp4"  controls autoplay width="100%" height="100%"></video></div>
             </div>
             <!-- <audio src="video/xia.mp3" loop autoplay preload="auto"></audio> -->
         </div>
@@ -67,7 +69,7 @@
                     ,height:'600px' //设置容器宽
                     ,arrow: 'always' //始终显示箭头
                     //,anim: 'updown' //切换动画方式
-                    ,interval:'12000'
+                    ,interval:'110500'
                     ,indicator:'inside'
                 });
                 });   
@@ -108,6 +110,24 @@
                             }
                         })
                     })
+            </script>
+            <script type="text/javascript">
+                debugger;
+                var vList = [ '/video/huanzhuang2.mp4', '/video/huanzhuang1.mp4' ]; // 初始化播放列表 var
+                vLen = vList.length; // 播放列表的长度
+                var curr = 0; // 当前播放的视频 
+                var video = document.getElementById("video2");
+                video.addEventListener('ended', play);
+                play();
+                function play() {
+                    var video = document.getElementById("video2");
+                    video.src = vList[curr];
+                    video.load(); //如果短的话，可以加载完成之后再播放，监听 canplaythrough 事件即可
+                    video.play();
+                    curr++;
+                    if (curr >= vLen)
+                        curr = 0;// 播放完了，重新播放
+                }
             </script>
     </div>
 </body>
