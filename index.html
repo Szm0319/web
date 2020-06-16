@@ -31,7 +31,11 @@
             float: left;
             margin-top: 42px;
             position: absolute;
+            z-index: 999;
         
+        }
+        #login{
+            z-index: 999;
         }
         .head{
             float: left;
@@ -61,7 +65,7 @@
         }
         #td2{
             position: relative;
-            left: 40px;
+            left: 100px;
             z-index: 99999;
         }
         #td3{
@@ -135,6 +139,9 @@
             width: 92%;
             right: 4%;
         }
+        .layui-carousel{
+            z-index: 999;
+        }
         .lianjie{
             margin-left: 20%;
             margin-top: 15%;
@@ -176,10 +183,10 @@
             text-align: center;
             font-size: larger;
             position: absolute;
-            font-style:oblique;
+
             font-weight: bolder;
             letter-spacing: 2px;
-            color: fuchsia;
+            color: white;
         }
         .table1 a{ font-size: 15px;
             list-style: none; 
@@ -194,10 +201,10 @@
         } 
         #left input{
             font-size: 15px;
-            background-color: rgb(243, 43, 233);
+            background-color: pink;
             width: 100px; 
             text-align: center; 
-            border: 3px solid rgb(206, 34, 206);
+            border: 3px solid pink(206, 34, 206);
             border-radius: 10px; /*圆角*/
             margin-top: 7px;
         } 
@@ -209,11 +216,10 @@
             margin-right: 50px;
             font-size: 15px;
             width: 100px; 
-            border-radius: 0px; /*圆角*/
             margin-top: 7px;
             display: block;
             border-radius: 50px;                
-            background-color: rgb(63, 119, 58);
+            background-color: rgb(87, 202, 76);
             margin: 10px auto;
         }
         #content1 a{
@@ -236,13 +242,15 @@
             font-size: 15px;
         }
         .buttom {
-            top: 1500px;
-            margin-bottom: 50px;
+            top: 1470px;
+            bottom: 1px;
             position: absolute;
-            left: 30%;
-            font-size: larger;
-            font-weight: bolder;
-            
+            background-color: pink;
+            border:5px solid pink;
+            width: 100%;  
+            height: 25px;
+            letter-spacing: 3px;
+            color: purple; 
         }
         .buttom a{
             color: rgb(221, 129, 23);
@@ -311,6 +319,7 @@
             margin-left: 0px;
             font-size: 15px;
             width: 120px; 
+            color: rgb(76, 197, 92);
         }
         
     </style>
@@ -322,13 +331,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 <body>
-    <script>
+<script>
         //一般直接写在一个js文件中
         layui.use(['layer', 'form'], function(){
           var layer = layui.layer
           ,form = layui.form;
         });
-    </script> 
+</script> 
 <div class="wrap">
             <div class="head">
                 <div class="logo"><img src="/img/logo.jpg" alt="logo" height=80px;></div>
@@ -371,6 +380,7 @@
                                         <ul id="son">
                                             <li><a href="/person/dsmj.html">等什么君</a></li>
                                             <li><a href="/person/lfcz.html">拉夫船长</a></li>
+                                            <li><a href="/person/lanqiuxinxing.html">篮球新星</a></li>
                                         </ul>
                                     </li>
                                 </ul><td>
@@ -383,6 +393,7 @@
                                             <li><a href="#">汉服魅力</a></li>
                                             <li><a href="/kinds/movie.html">热影推荐</a></li>
                                             <li><a href="#">回首童年</a></li>
+                                            <li><a href="/kinds/meishi.html">美食推荐</a></li>
                             
                             
                                         </ul>
@@ -556,7 +567,7 @@
                 elem: '#test2'
                 ,width: '35%'
                 ,height:'350px' //设置容器宽
-                ,arrow: 'always' //始终显示箭头
+                ,arrow: 'hover' //始终显示箭头
                 //,anim: 'updown' //切换动画方式
                 ,interval:'105000'
                 ,indicator:'inside'
@@ -651,16 +662,16 @@
     </div>
 </div>
 <div class="buttom">
-        <a href="">娱乐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a href="">舞蹈&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a  href="">电影&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a href="">搞笑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a href="">音乐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a  href="">游戏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <a href="">综艺&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>     
+    <marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="3" width="1400"onmouseover="this.stop();" onmouseout="this.start();">
+        3号车队始建于2020年5月24日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 组长：邵泽明 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 组内成员：李宇昂 马宏昊 宋鹏程 金睿恒 贾智朝    
+        &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  完成项目：正能量加油站 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 本站主旨为了给当下热门的短视频分类处理 使用户能得到的更好的观看体验
+    </marquee>
 </div>
+
 <div id=win style="display:none; POSITION:absolute; left:50%;top:55%; width:600px; height:300px; margin-left:-300px;
-             margin-top:-200px;z-index: 9999; border:5px solid #888; background-color:whitesmoke;opacity: 0.8; text-align:center">
+             margin-top:200px;z-index: 9999; border:5px solid #888; background-color:whitesmoke;opacity: 0.8; text-align:center">
             <div id="title1">
                 正能量加油站
             </div>
