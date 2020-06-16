@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-
 <style>
-
 </style>
 <meta name="description" content="Sprint is free website template, responsive bootstrap, HTML5 CSS3 layout that can be used for any website.">
 <meta name="viewport" content="width=device-width">
-
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
-
 <link rel="stylesheet" href="/css/bootstrap.min.css">
-
 <link rel="stylesheet" href="/css/templatemo_style.css">
-
 <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
-
 </head>
 <body>
 <div id="front">
@@ -59,7 +52,7 @@
 <div class="site-slider">
 	<ul class="bxslider">
 		<li>
-			<video src="/video/zhizhuxia.mp4" autoplay loop width="100%"  alt="slider image 1">
+			<video src="/video/zhizhuxia.mp4" id="video2"   width="100%"  alt="slider image 1">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-right">
@@ -71,7 +64,7 @@
 			</div>
 		</li>
 		<li>
-			<video src="/video/bigbee.mp4"  controls width="100%" alt="slider image 2">
+			<video src="/video/bigbee.mp4" id="video1"   width="100%" alt="slider image 2">
 			<div class="container caption-wrapper">
 				<div class="slider-caption">
 					<h2>Using Bootstrap Framework</h2>
@@ -84,8 +77,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div id="bx-pager">
-						<a data-slide-index="0" href=""><img src="/img/zhizhuxia.jpg" width="300px" alt="image 1" /></a>
-						<a data-slide-index="1" href=""><img src="/img/bigbee.jpg" width="300px" alt="image 2" /></a>
+						<a data-slide-index="0" href=""><img src="/img/zhizhuxia.jpg" width="300px" alt="image 1"   onclick="bofang2()" /></a>
+						<a data-slide-index="1" href=""><img src="/img/bigbee.jpg" width="300px" alt="image 2"  onclick="bofang1()"/></a>
 					</div>
 				</div>
 			</div>
@@ -98,7 +91,7 @@
 	</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	<ul class="bxslider" id="gxyl">
 		<li>
-			<video src="/video/aqgy.mp4" controls width="100%"  alt="slider image 1">
+			<video src="/video/aqgy.mp4" id="video3" width="100%"  alt="slider image 3">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-right">
@@ -110,46 +103,10 @@
 			</div>
 		</li>
 		<li>
-			<video src="images/slider/tutu_1_x264.mp4"  controls width="100%" alt="slider image 2">
+			<video src="/video/ndmz.mp4" id="video4"  width="100%" alt="slider image 2">
 			<div class="container caption-wrapper">
 				<div class="slider-caption">
 					<h2>Using Bootstrap Framework</h2>
-				</div>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/slide3.jpg" alt="slider image 3">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>Mobile Ready Website</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/slide4.jpg" alt="slider image 4">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>Responsive Layout</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/slide5.jpg" alt="slider image 5">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>Download and use it for free</h2>
-						</div>
-					</div>
 				</div>
 			</div>
 		</li>
@@ -159,11 +116,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div id="bx-pager">
-						<a data-slide-index="0" href=""><img src="/img/aqgy.jpg" width="300px"   alt="image 1" /></a>
-						<a data-slide-index="1" href=""><img src="images/slider/thumb2.jpg" alt="image 2" /></a>
-						<a data-slide-index="2" href=""><img src="images/slider/thumb3.jpg" alt="image 3" /></a>
-						<a data-slide-index="3" href=""><img src="images/slider/thumb4.jpg" alt="image 4" /></a>
-						<a data-slide-index="4" href=""><img src="images/slider/thumb5.jpg" alt="image 5" /></a>
+						<a data-slide-index="0" href=""><img src="/img/aqgy.jpg" width="300px"  onclick="bofang3()" alt="image 1" /></a>
+						<a data-slide-index="1" href=""><img src="/img/ndmz1.png" onclick="bofang4()" alt="image 2" /></a>
 					</div>
 				</div>
 			</div>
@@ -174,7 +128,7 @@
 	<div class="col-md-12 text-center">
 		<h1 class="section-title">搞笑娱乐</h1>
 	</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<ul class="bxslider" id="gxyl">
+	<ul class="bxslider" id="shanggan">
 		<li>
 			<video src="/video/aqgy.mp4" controls width="100%"  alt="slider image 1">
 			<div class="container">
@@ -195,53 +149,14 @@
 				</div>
 			</div>
 		</li>
-		<li>
-			<img src="images/slider/slide3.jpg" alt="slider image 3">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>Mobile Ready Website</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/slide4.jpg" alt="slider image 4">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>Responsive Layout</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<img src="images/slider/slide5.jpg" alt="slider image 5">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>Download and use it for free</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
 	</ul> <!-- /.bxslider -->
 	<div class="bx-thumbnail-wrapper">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div id="bx-pager">
-						<a data-slide-index="0" href=""><img src="/img/aqgy.jpg" width="300px"   alt="image 1" /></a>
+						<a data-slide-index="0" href=""><img src="/img/aqgy.jpg" width="300px"   alt="image 3"  onclick="bofang3()" /></a>
 						<a data-slide-index="1" href=""><img src="images/slider/thumb2.jpg" alt="image 2" /></a>
-						<a data-slide-index="2" href=""><img src="images/slider/thumb3.jpg" alt="image 3" /></a>
-						<a data-slide-index="3" href=""><img src="images/slider/thumb4.jpg" alt="image 4" /></a>
-						<a data-slide-index="4" href=""><img src="images/slider/thumb5.jpg" alt="image 5" /></a>
 					</div>
 				</div>
 			</div>
@@ -255,7 +170,7 @@
 	</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	<ul class="bxslider" id="sejm">
 		<li>
-			<video src="/video/chicken.mp4" controls width="100%"  alt="slider image 1">
+			<video src="/video/chicken.mp4" controls width="100%" id="video7" alt="slider image 1">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-right">
@@ -267,7 +182,7 @@
 			</div>
 		</li>
 		<li>
-			<img src="images/slider/slide5.jpg" alt="slider image 5">
+			<video src="/video/ndmz.mp4" controls width="100%" id="video8" alt="slider image 2">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-right">
@@ -284,7 +199,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div id="bx-pager">
-						<a data-slide-index="0" href=""><img src="/img/chicken.jpg" width="300px"   alt="image 1" /></a>
+						<a data-slide-index="0" href=""><img src="/img/chicken.jpg" width="300px"   alt="image 1"  onclick="bofang7()" /></a>
+						<a data-slide-index="0" href=""><img src="/img/ndmz1.png" width="300px"   alt="image 1" onclick="bofang8()"  /></a>
 
 					</div>
 				</div>
@@ -328,6 +244,21 @@
 				}
 			})
 		})
+</script>
+<script>
+	function bofang1(){
+		video1.play();
+	}
+</script>
+<script>
+	function bofang3(){
+		video3.play();
+	}
+</script>
+<script>
+	function bofang2(){
+		video2.play();
+	}
 </script>
 <script src="/bk/jquery-3.5.1.slim.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
