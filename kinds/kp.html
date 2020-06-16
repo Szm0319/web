@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科普</title>
+    <style>
+        body {
+            background-image: url('/img/earth.jpg');
+            background-size: 100%;
+        }
+
+        #b1 {
+            border-radius: 6rem;
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            position: absolute;
+        }
+
+        #left {
+            top: 30%;
+            width: 25%;
+            float: left;
+            position: absolute;
+            z-index: 9;
+
+        }
+
+        #right {
+
+            top: 30%;
+            width: 25%;
+            float: left;
+            position: absolute;
+        }
+
+
+        #aa {
+            float: left;
+            color: white;
+            margin-left: 1000px;
+            margin-top: -15px;
+            letter-spacing: 1.5px;
+            line-height: 2em;
+        }
+
+        .title {
+            font-size: 25px;
+            float: left;
+            color: rgb(98, 43, 226);
+            margin-left: 1100px;
+            margin-bottom: 0px;
+        }
+    </style>
+    
+    <script type="text/javascript">
+
+        $(functiion(){
+            
+        }
+        );
+
+
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <button id="b1" onclick="location='/index.html'"><img src="/img/logo.jpg" width="50px"></button>
+        <p id="p1">回到主页</p>
+    </div>
+    <div id="left">
+        <video id="video"  autoplay="autoplay" controls="controls" src="/video/earth1.mp4" width="100%"></video>
+    </div>
+    <div id="right">
+        <video id="video" src="/video/earth2.mp4" width="100%"></video>
+    </div>
+    <h1 class="title">关于地球的小知识，你了解多少？</h1>
+    <pre id="aa"></pre>
+    <div style="display:none" id="w">
+        地球上陆地面积占29%，海洋面积占71%，所以有形象地称地球为“三分
+        的陆地，七分的海洋”。
+        地球是太阳的第三颗行星，是我们太阳系中唯一一颗不以希腊或罗马神灵
+        命名的行星。
+        地球大约在45.5亿年前形成，是唯一一颗支持生命的已知星球。
+        A.地球的自传正在逐渐减缓
+        B.地球曾被认为是宇宙的中心
+        C.地球有强大的磁场
+        D.地球只有一颗天然卫星
+        E.地球是唯一一个不以神命名的行星
+        F.地球是太阳系中密度最高的行星
+    </div>
+    <script language="javascript">
+        var index = 0;
+        var word = document.getElementById("w").innerHTML;
+        function type() {
+            document.getElementById("aa").innerText = word.substring(0, index++);
+        }
+        setInterval(type, 200);//间隔时间
+    </script>
+    <script src="/jquery-3.5.1.slim.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/Websnowjq.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#divSnow-1").websnowjq();
+        });
+    </script>
+    <script type="text/javascript">
+        debugger;
+        var vList = ['/video/earth2.mp4', '/video/earth1.mp4']; // 初始化播放列表 var
+        vLen = vList.length; // 播放列表的长度
+        var curr = 0; // 当前播放的视频 
+        var video = document.getElementById("video");
+        video.addEventListener('ended', play);
+        play();
+        function play() {
+            var video = document.getElementById("video");
+            video.src = vList[curr];
+            video.load(); //如果短的话，可以加载完成之后再播放，监听 canplaythrough 事件即可
+            video.play();
+            curr++;
+            if (curr >= vLen)
+                curr = 0; // 播放完了，重新播放
+        }
+    </script>
+
+</body>
+
+</html>
