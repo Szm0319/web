@@ -438,7 +438,20 @@
     <input type="button" value="换装视频" onclick="detail()"/><br/>
     <input type="button" value="体育篮球" onclick="detail1()"/><br/>
     <input type="button" value="中国好声音" onclick="detail2()"/><br/>
-    <input type="button" value="甜美爱情" onclick="detail4()"/>
+    <input type="button" value="甜美爱情" onclick="detail4()"/><br/>
+    <input type="button" value="治愈民谣" onclick="detail5()"/>
+
+    <script>
+        function detail5(){
+            layer.open({
+            skin: 'demo-class',
+            area: ['80%', '90%'],
+            anim: 5,
+            type: 2, 
+            content:[ '/lunbo/minyao.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+        }
+    </script>
 
     <script>
         function detail4(){
