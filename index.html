@@ -382,6 +382,7 @@
                                             <li><a href="/person/lfcz.html">拉夫船长</a></li>
                                             <li><a href="/person/wyy.html">网易云文案</a></li>
                                             <li><a href="/person/lanqiuxinxing.html">篮球新星</a></li>
+                                            <li><a href="/kinds/meishi.html">美食推荐</a></li>
                                         </ul>
                                     </li>
                                 </ul><td>
@@ -394,7 +395,7 @@
                                             <li><a href="#">汉服魅力</a></li>
                                             <li><a href="/kinds/movie.html">热影推荐</a></li>
                                             <li><a href="#">回首童年</a></li>
-                                            <li><a href="/kinds/meishi.html">美食推荐</a></li>
+                                            
                             
                             
                                         </ul>
@@ -403,10 +404,13 @@
                                 <td id="td3"><ul id="father">
                                     <li><a href="#">我的</a>
                                         <ul id="son">
-                                            <li><a href="/My/info.html">个人信息</a></li>
+                                            <li><a href="/My/myinformation.html">个人信息</a></li>
                                             <li><a href="#">浏览记录</a></li>
                                             <li><a href="#">退出登录</a></li>
                                             <li><a href="#">我的分享</a></li>
+                                            
+                                            
+                                            
                                         </ul>
                                     </li>
                                 </ul></td>
@@ -435,7 +439,34 @@
     <input type="button" value="换装视频" onclick="detail()"/><br/>
     <input type="button" value="体育篮球" onclick="detail1()"/><br/>
     <input type="button" value="中国好声音" onclick="detail2()"/><br/>
-    <input type="button" value="甜美爱情" onclick="detail4()"/>
+    <input type="button" value="爱情真谛" onclick="detail4()"/><br/>
+    <input type="button" value="治愈民谣" onclick="detail5()"/><br/>
+    <input type="button" value="励志故事" onclick="detail6()"/>
+   
+    <script>
+        function detail6(){
+            layer.open({
+            skin: 'demo-class',
+            area: ['80%', '90%'],
+            anim: 5,
+            type: 2, 
+            content:[ '/lunbo/lizhi.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+        }
+    </script>
+
+
+    <script>
+        function detail5(){
+            layer.open({
+            skin: 'demo-class',
+            area: ['80%', '90%'],
+            anim: 5,
+            type: 2, 
+            content:[ '/lunbo/minyao.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+        }
+    </script>
 
     <script>
         function detail4(){
