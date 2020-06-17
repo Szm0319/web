@@ -694,17 +694,20 @@
             var index = 0;
             var word = document.getElementById("content2").innerText;
             var video = document.getElementById("video4");
-            var time = setInterval(type,300);
+            var time = setInterval(type)
             function type() {
-                document.getElementById("aa").innerText = word.substring(0, index++);
-                setInterval(type, 1000);//间隔时间
-                if (video.paused) {
+                setInterval(type, 200);//间隔时间
+                if (video.play) {
+                    document.getElementById("aa").innerText = word.substring(0, index++);
+                }
+                if(video.paused){
                     index = 0;
                     clearInterval(time);
-                 }if(video.play){
-                     index++;
-                 }
+
+                }
+                
             }
+
 
         }
 
