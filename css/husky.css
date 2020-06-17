@@ -1476,7 +1476,7 @@
   animation: husky-squiggly-anim 0.3s infinite;
   height: 250px;
   width: 300px;
-  left: 1000px;
+  left: 80%;
   top: 80px;
   z-index: 999;
 }
