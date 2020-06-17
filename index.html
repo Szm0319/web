@@ -452,7 +452,19 @@
     <input type="button" value="中国好声音" onclick="detail2()"/><br/>
     <input type="button" value="爱情真谛" onclick="detail4()"/><br/>
     <input type="button" value="治愈民谣" onclick="detail5()"/><br/>
-    <input type="button" value="励志故事" onclick="detail6()"/> 
+    <input type="button" value="励志故事" onclick="detail6()"/> <br/>
+    <input type="button" value="学习方法" onclick="detail7()"/> 
+    <script>
+        function detail7(){
+            layer.open({
+            skin: 'demo-class',
+            area: ['80%', '90%'],
+            anim: 5,
+            type: 2, 
+            content:[ '/lunbo/xuexi.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+        }
+    </script>
     <script>
         function detail6(){
             layer.open({
