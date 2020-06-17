@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>正能量加油站&nbsp;|&nbsp;主页</title>
     <style>
+        body{
+            background-image: url('/img/yinhua.jpg');
+        }
         .wrap{
             position: fixed;
             z-index: 999999;
+            background-image: url('/img/354.jpg');
+            background-size: 100%;
             width: 100%;
             background-color: rgb(255, 255, 255);
         }
@@ -28,11 +33,17 @@
         .search-box{
             float: left;
             left:40%;
+            width: 300px;
+            height: 35px;
             float: left;
-            margin-top: 42px;
+            margin-top: 35px;
             position: absolute;
             z-index: 999;
         
+        }
+        #search{
+            width: 100%;
+            height: 100%;
         }
         #login{
             z-index: 999;
@@ -143,8 +154,9 @@
             z-index: 999;
         }
         .lianjie{
-            margin-left: 20%;
-            margin-top: 15%;
+            margin-left: 10%;
+            margin-top: 5%;
+            font-size: 30px;
             position: absolute;
             color: rebeccapurple;
         }
@@ -219,7 +231,7 @@
             margin-top: 7px;
             display: block;
             border-radius: 50px;                
-            background-color: rgb(87, 202, 76);
+            background-color: rgb(8, 188, 243);
             margin: 10px auto;
         }
         #content1 a{
@@ -322,7 +334,7 @@
             margin-left: 0px;
             font-size: 15px;
             width: 120px; 
-            color: rgb(76, 197, 92);
+            color: rgb(14, 157, 224);
         }
     </style>
     <link rel="stylesheet" href="/css/husky.css" media="all">
@@ -345,7 +357,7 @@
                 <div class="logo"><img src="/img/logo.jpg" alt="logo" height=80px;></div>
                    <h2 id="name">正能量加油站</h2>
                 <div class="search-box">
-                    <input type="search" placeholder="输入搜索"/>
+                    <input type="search" id="search" placeholder="输入搜索"/>
                 </div>
                 <div class="button">
                 <input type="button" id="login" class="layui-btn" onclick="openLogin()" value="Join&nbsp;us">
@@ -530,7 +542,7 @@
              }else{
                      audios.pause(); //如果音乐是播放的，点击暂停
                  }
-            play.style.backgroundColor="yellow";
+            play.style.backgroundColor="pink";
               }
        </script>
 </div>
