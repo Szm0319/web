@@ -242,6 +242,7 @@
             font-size: 15px;
         }
         .buttom {
+            text-align: center;
             top: 1470px;
             bottom: 1px;
             position: absolute;
@@ -249,8 +250,8 @@
             border:5px solid pink;
             width: 100%;  
             height: 25px;
-            letter-spacing: 3px;
-            color: purple; 
+            letter-spacing: 2px;
+            color: black; 
         }
         .buttom a{
             color: rgb(221, 129, 23);
@@ -304,11 +305,13 @@
             position: absolute;
             line-height: 40px;
         }
-        #content2{
+        #aa{
+            top: -40px;
+            left: -30px;
             font-size: 16px;
             text-indent: 30px;
             letter-spacing: 2px;
-            color: rgb(187, 36, 36);
+            color: red;
         }
         #jianjie1{
             float: right;
@@ -321,7 +324,6 @@
             width: 120px; 
             color: rgb(76, 197, 92);
         }
-        
     </style>
     <link rel="stylesheet" href="/css/husky.css" media="all">
     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
@@ -380,9 +382,9 @@
                                         <ul id="son">
                                             <li><a href="/person/dsmj.html">等什么君</a></li>
                                             <li><a href="/person/lfcz.html">拉夫船长</a></li>
-                                            <li><a href="/person/wyy.html">网易云文案</a></li>
                                             <li><a href="/person/lanqiuxinxing.html">篮球新星</a></li>
                                             <li><a href="/kinds/meishi.html">美食推荐</a></li>
+                                            <li><a href="/person/wyy.html">网易云文案</a></li>
                                         </ul>
                                     </li>
                                 </ul><td>
@@ -392,12 +394,9 @@
                                         <ul id="son">
                                             <li><a href="/kinds/lizhi.html" target="_self">少年励志</a></li>
                                             <li><a href="/kinds/music.html">听听音乐</a></li>
-                                            <li><a href="#">汉服魅力</a></li>
+                                            <li><a href="/kinds/kp.html">趣味科普</a></li>
                                             <li><a href="/kinds/movie.html">热影推荐</a></li>
-                                            <li><a href="#">回首童年</a></li>
-                                            
-                            
-                            
+                                            <li><a href="#">汉服魅力</a></li>
                                         </ul>
                                     </li>
                                 </ul></td>
@@ -441,8 +440,7 @@
     <input type="button" value="中国好声音" onclick="detail2()"/><br/>
     <input type="button" value="爱情真谛" onclick="detail4()"/><br/>
     <input type="button" value="治愈民谣" onclick="detail5()"/><br/>
-    <input type="button" value="励志故事" onclick="detail6()"/>
-   
+    <input type="button" value="励志故事" onclick="detail6()"/> 
     <script>
         function detail6(){
             layer.open({
@@ -454,8 +452,6 @@
             }); 
         }
     </script>
-
-
     <script>
         function detail5(){
             layer.open({
@@ -467,7 +463,6 @@
             }); 
         }
     </script>
-
     <script>
         function detail4(){
             layer.open({
@@ -479,7 +474,6 @@
             }); 
         }
     </script>
-
     <script>
         function detail1(){
             layer.open({
@@ -513,8 +507,7 @@
            content:[ '/lunbo/baolikoulan.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
            }); 
        }
-   </script>
-    
+   </script>  
 </div>
 <div id="lunbo">
     <video id="video1"  src="video/lunbo1.mp4" controls autoplay muted loop ></video> 
@@ -522,7 +515,7 @@
 <div id="right">
     
     <p id="play">夏季备忘录
-        <audio id="audio" src="/video/xia.mp3" autoplay></audio>
+        <audio id="audio" src="/video/xia.mp3" ></audio>
     </p>
     <p id="jianjie1">点击暂停音乐:</p>
     <br/>
@@ -684,22 +677,53 @@
     <h3>好剧推荐</h3>
     <hr class="layui-bg-orange">
     <div>
-    <video id="video4" src="/video/csmz.mp4"   controls  ></div>
-    <div id="jianjie" class="ml12">
-        <span class="ml16">1.沉睡魔咒</span><br/>
-        <span id="content2" class="ml12">&nbsp;&nbsp;&nbsp;该片主要讲述了美丽纯洁的玛琳菲森自小与斯特凡相识相爱，
-            后又被他背叛破坏自己守护的森林，从而开始一系列的复仇计划，
-            最终理解真爱，学会宽恕的成长故事。
-        </span>
+    <video id="video4" src="/video/csmz.mp4" onclick="zimu()"  controls  ></div>
+    <div id="jianjie" >
+        <span class="ml16">沉睡魔咒</span><br/>
+        <pre id="aa"></pre>
+        <div style="display:none" id="content2">
+            玛琳菲森（安吉丽娜·朱莉饰）是一个美丽纯洁，拥有翅膀能够飞翔的年轻仙子，生长于
+        宁静祥和的森林王国。然而美好的时光总是短暂的，王国突遭人类军队侵袭，玛琳菲森在战斗
+        中逐渐成长为这片森林的守护者，同时也遭受到了无情背叛，从此她的心灵开始变得冷酷，脑
+        海只剩复仇的念头。为了报复，她给人类国王的女儿爱洛公主施下恶咒；然而随着爱洛的成长，
+        玛琳菲森才逐渐意识到——这位小公主不仅能给两个世界带来和平，也许还能给自己带来真正的
+        快乐.
+        </div>
+        <script language="javascript">
+            function zimu(){
+            var index = 0;
+            var word = document.getElementById("content2").innerText;
+            var video = document.getElementById("video4");
+            var time = setInterval(type,300);
+            function type() {
+                document.getElementById("aa").innerText = word.substring(0, index++);
+                setInterval(type, 1000);//间隔时间
+                if (video.paused) {
+                    index = 0;
+                    clearInterval(time);
+                 }if(video.play){
+                     index++;
+                 }
+            }
+
+        }
+
+
+        </script>
     </div>
 </div>
 <div class="buttom">
-    <marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="3" width="1400"onmouseover="this.stop();" onmouseout="this.start();">
-        3号车队始建于2020年5月24日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 组长：邵泽明 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 组内成员：李宇昂 马宏昊 宋鹏程 金睿恒 贾智朝    
-        &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  完成项目：正能量加油站 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 本站主旨为了给当下热门的短视频分类处理 使用户能得到的更好的观看体验
-    </marquee>
+    <!-- <marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="3" width="1400"onmouseover="this.stop();" onmouseout="this.start();">
+        3号车队始建于2020年5月24日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;组长：邵泽明 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;组内成员：李宇昂 马宏昊 宋鹏程 金睿恒 贾智朝    
+        &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;完成项目：正能量加油站 
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 本站主旨为了给当下热门的短视频分类处理 使用户能得到的更好的观看体验
+    </marquee> -->
+    <span>3 car team &nbsp;&nbsp;welcome!</span>
 </div>
 
 <div id=win style="display:none; POSITION:absolute; left:50%;top:55%; width:600px; height:300px; margin-left:-300px;
