@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            background-image: url('/img/yinhua.jpg');
-        }
         .button{
             float:right;
             left: 85%;
@@ -16,8 +13,8 @@
             position: absolute;
         }
         .table1{
-            border: 5px solid pink;
-            background-color: pink;
+            border: 5px solid rgb(88, 205, 235);
+            background-color: rgb(88,205, 235);
             opacity: 1;
             width: 100%;
             height: 20px;
@@ -53,7 +50,7 @@
         .table1 a{ font-size: 15px;
             list-style: none; 
             text-decoration: none;
-            background-color:pink; 
+            background-color:rgb(243, 242, 242); 
             width: 80px; 
             text-align: center; 
             border: 1px solid pink; 
@@ -64,12 +61,30 @@
         #damanwei{
             width: 100%;
             height: 620px;
+            background-image: url("/img/zhizhuxia.jpg");
             background-color: black;
+            background-size: 100%;
         }
         #dabeishang{
             width: 100%;
-            height: 620px;
+            height: 750px;
+            background-image: url("/img/ttnk.jpg");
             background-color: white;
+            background-size: 100%;
+        }
+        #dagaoxiao{
+            width: 100%;
+            height: 620px;
+            background-image: url("/img/qiangjie.jpg");
+            background-color: white;
+            background-size: 100%;
+        }
+        #dadongman{
+            width: 100%;
+            height: 700px;
+            background-image: url("/img/ndmz.png");
+            background-color: rgb(14, 10, 10);
+            background-size: 100%;
         }
         #manwei{
             width: 70%;
@@ -87,8 +102,8 @@
         #anniu{
             left: 0px;
             width: 200px;
-            background-color: yellowgreen;
-            color: black;
+            background-color: rgb(6, 175, 226);
+            color: rgb(240, 233, 233);
             border-radius: 7px;
             line-height: 30px;
             letter-spacing: 2px;
@@ -205,10 +220,10 @@
     </video>
 </div>
 </div>
-<div id="dabeishang">
+<div id="dagaoxiao">
     <div id="left">
         <br/>
-        <input type="button" id="anniu" value="等待爱情" onclick="detail3()"/><br/><br/>
+        <input type="button" id="anniu" value="大赢家" onclick="detail3()"/><br/><br/>
         <input type="button" id="anniu" value="爱情公寓" onclick="detail4()"/><br/>
     
     
@@ -236,9 +251,83 @@
         </script>
     </div>
     <div id="manwei">
-        <video id="video3" name="video" width="100%" height="100%" src="/video/aiqing2.mp4" >
+        <video id="video3" name="video" width="100%" height="100%" src="/video/qiiangjie.mp4" >
         </video>
         <video id="video4" name="video" width="100%" height="100%" src="/video/aqgy.mp4" style="display: none;" >
+        </video>
+    </div>
+</div>
+<div id="dadongman">
+    <div id="left">
+        <br/>
+        <input type="button" id="anniu" value="你的名字" onclick="detail5()"/><br/><br/>
+        <input type="button" id="anniu" value="三只小鸡" onclick="detail6()"/><br/>
+    
+    
+        <script>
+            function detail5(){
+            if (video5.paused) {
+                video5.play();  
+            document.getElementById("video6").style.display="none";//设置EleId标签隐藏
+            document.getElementById("video5").style.display="inline";//设置EleId标签显示
+            }
+            else{
+                video5.pause();
+            }
+        }
+            function detail6(){
+            if (video6.paused) {
+                video6.play();
+                document.getElementById("video5").style.display="none";//设置EleId标签隐藏
+                document.getElementById("video6").style.display="inline";//设置EleId标签显示
+            }
+            else{
+                video6.pause();
+            }
+        }
+        </script>
+    </div>
+    <div id="manwei">
+        <video id="video5" name="video" width="100%" height="100%" src="/video/ndmz.mp4" >
+        </video>
+        <video id="video6" name="video" width="100%" height="100%" src="/video/chicken.mp4" style="display: none;" >
+        </video>
+    </div>
+</div>
+<div id="dabeishang">
+    <div id="left">
+        <br/>
+        <input type="button" id="anniu" value="泰坦尼克号" onclick="detail7()"/><br/><br/>
+        <input type="button" id="anniu" value="等待爱情" onclick="detail8()"/><br/>
+    
+    
+        <script>
+            function detail7(){
+            if (video7.paused) {
+                video7.play();  
+            document.getElementById("video8").style.display="none";//设置EleId标签隐藏
+            document.getElementById("video7").style.display="inline";//设置EleId标签显示
+            }
+            else{
+                video7.pause();
+            }
+        }
+            function detail8(){
+            if (video8.paused) {
+                video8.play();
+                document.getElementById("video7").style.display="none";//设置EleId标签隐藏
+                document.getElementById("video8").style.display="inline";//设置EleId标签显示
+            }
+            else{
+                video6.pause();
+            }
+        }
+        </script>
+    </div>
+    <div id="manwei">
+        <video id="video7" name="video" width="100%" height="100%" src="/video/aiqing1.mp4" >
+        </video>
+        <video id="video8" name="video" width="100%" height="100%" src="/video/aiqing2.mp4" style="display: none;" >
         </video>
     </div>
 </div>
