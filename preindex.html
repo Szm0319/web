@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>前页</title>
 </head>
 <style>
     body{
         color: black;
-        background-image: url("/img/index.jpg");
         background-size: 100%;
+    }
+    video#bgvideo  {
+
+            position: fixed; right:0; bottom:0;left: 0%;
+
+            min-width:100%; min-height:100%; width: auto;height:
+
+            auto;z-index:-100; background-size: cover;
     }
     video{
         float: left;
@@ -17,32 +24,32 @@
         height: 98%;
         position: absolute;
     }
-    input{
-        margin-top: 300px;     
-        margin-right: 250px;
-        border-radius: 50px;
-        font-size: larger;
-        color: chocolate;
-        background-color: black;
-        width: 200px;
-        height: 50px;
-        float: right;
-    }
     audio{
         display: none;
     }
+    .subscribe-form{
+        margin-top: 50px;
+    }
 </style>
-<body>    
-    <video id="video1" src="/video/lisa.mp4" autoplay loop ></video>
-    <input type="button" value="点击进入主页" onclick="turn()"/>
-    
-    <audio id="audio1" src="/video/laila.mp3" ></audio>
-    <script>
-        function turn(){
-            video1.pause();
-            audio1.play();
-            setTimeout("window.location.href='index.html'",3000);
-        }
-    </script>
+<link rel="stylesheet" type="text/css" href="/css/style3.css" />
+<body>
+    <section id="container" class="blue">
+        <div id="logo">三 号 车 队</div>
+        <br />
+        <p>
+            three team
+            <br />
+            <span>made</span>
+        </p>
+        <br/>
+        <br/><br/>
+            <form method="POST" action="subscribe.php" />
+                <div id="subscribe-form">
+                    <input id="mail-input" placeholder="正能量加油站" type="text" name="Email" />
+                    <input id="mail-submit" type="submit" value="点击进入" onclick="java:window.open('/index.html')" />
+                </div>
+            </form>
+    </section>    
+    <video src="/video/wrzd.mp4" id="bgvideo" autoplay  loop></video>
 </body>
 </html>
