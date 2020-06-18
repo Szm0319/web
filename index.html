@@ -12,8 +12,9 @@
             position: fixed;
             z-index: 999999;
             background-image: url('/img/354.jpg');
-            background-size: 100%;
-            width: 100%;
+            background-size:100rem 13rem;
+            width: 100%; 
+            height: 100px;
             background-color: rgb(255, 255, 255);
         }
         .logo{
@@ -156,7 +157,7 @@
         .lianjie{
             margin-left: 10%;
             margin-top: 5%;
-            font-size: 30px;
+            font-size: 25px;
             position: absolute;
             color: rebeccapurple;
         }
@@ -255,7 +256,7 @@
         }
         .buttom {
             text-align: center;
-            top: 1470px;
+            top: 1460px;
             bottom: 1px;
             position: absolute;
             background-color: pink;
@@ -264,6 +265,15 @@
             height: 25px;
             letter-spacing: 2px;
             color: black; 
+
+        }
+        #mingyan{
+            bottom: 5px;
+            letter-spacing: 20px;
+            font-size: 15px;
+            font-weight: bolder;
+            float: left;
+            left: 75%;
         }
         .buttom a{
             color: rgb(221, 129, 23);
@@ -323,7 +333,8 @@
             font-size: 16px;
             text-indent: 30px;
             letter-spacing: 2px;
-            color: red;
+            color: rgb(206, 34, 206);
+            font-weight: bold;
         }
         #jianjie1{
             float: right;
@@ -416,7 +427,7 @@
                                     <li><a href="#">我的</a>
                                         <ul id="son">
                                             <li><a href="/My/myinformation.html">个人信息</a></li>
-                                            <li><a href="#">浏览记录</a></li>
+                                            <li><a href="/My/liulanjilu.html">浏览记录</a></li>
                                             <li><a href="#">退出登录</a></li>
                                             <li><a href="#">我的分享</a></li>
                                             
@@ -452,7 +463,19 @@
     <input type="button" value="中国好声音" onclick="detail2()"/><br/>
     <input type="button" value="爱情真谛" onclick="detail4()"/><br/>
     <input type="button" value="治愈民谣" onclick="detail5()"/><br/>
-    <input type="button" value="励志故事" onclick="detail6()"/> 
+    <input type="button" value="励志故事" onclick="detail6()"/> <br/>
+    <input type="button" value="学习方法" onclick="detail7()"/> 
+    <script>
+        function detail7(){
+            layer.open({
+            skin: 'demo-class',
+            area: ['80%', '90%'],
+            anim: 5,
+            type: 2, 
+            content:[ '/lunbo/xuexi.html','no'] //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['http://sentsin.com', 'no']
+            }); 
+        }
+    </script>
     <script>
         function detail6(){
             layer.open({
@@ -738,7 +761,7 @@
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 本站主旨为了给当下热门的短视频分类处理 使用户能得到的更好的观看体验
     </marquee> -->
-    <span>3 car team &nbsp;&nbsp;welcome!</span>
+    <span id="mingyan">努力的样子真美!</span>
 </div>
 
 <div id=win style="display:none; POSITION:absolute; left:50%;top:55%; width:600px; height:300px; margin-left:-300px;
