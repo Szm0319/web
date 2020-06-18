@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人信息修改</title>
+    <title>注册页面</title>
     <style >
         #date{
             text-align: center;
@@ -21,9 +21,23 @@
         }
         body{
             background-color:rgb(192, 92, 92);
-            background-image:url(img/99.jpeg);
+            background-image:url(img/katong2.jpg);
             background-size: 100% 200%;
-            
+         
+        }
+        #anniu{
+            background-color: cornflowerblue;
+            width: 100px;
+            border: 1px solid cornflowerblue;
+        }
+        table{
+            font-weight: bolder;
+            left: 26%;
+            border: 3px solid black;
+            position: relative;
+            width: 700px;
+            height: 500px;
+            font-size: 20px;
         }
         /* video#bgvideo  {
 
@@ -36,12 +50,13 @@
     </style>
 </head>
 <body >
+    <audio src="/video/badguy.mp3" autoplay></audio>
     <a href="index.html" ><b><strong>返回上一页</strong></b></a>
 <form  onsubmit="return confirm('是否进行提交？')" action="login.html">
     <div id="date">
         
         <h1><b>个人信息注册页面</b></h1><br/>
-        <table align="center">
+        <table border="1">
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;用户名:</td>
                 <td><input name="loginname" type="text" maxlength="12" required
@@ -63,7 +78,7 @@
             </tr>
             <tr>
                 <td>出生日期:</td>
-                <td align="left"><input name="birth" type="date" value="1990/10/10"/></td>
+                <td><input name="birth" type="date" value="1990/10/10" style="width: 155px;"/></td>
             </tr>
             <tr>
                 <td> 固定电话:</td>
@@ -87,7 +102,7 @@
             </tr>
             <tr>
                 <td>&nbsp;&nbsp;教育情况：</td>
-                <td align="left"><select>
+                <td><select style="width: 160px;">
                     <option value="小学">小学</option>
                     <option value="初中">初中</option>
                     <option value="高中">高中</option>
@@ -98,13 +113,11 @@
                     <option value="其他">其他</option>
                 </select></td>
             </tr>
-            <tr></tr><tr></tr><tr></tr>
-            <tr></tr><tr></tr><tr></tr>
             <tr>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;<input name="提交" type="submit"  /></td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input name="提交" id="anniu" type="submit"  /></td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input name="重置" type="reset" /></td>
+                    <input name="重置" id="anniu" type="reset" /></td>
                
             </tr>
         </table>

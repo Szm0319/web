@@ -25,7 +25,7 @@
         }
         #name{
             float: left;
-            color: rgb(14, 2, 14);
+            color: rgb(206, 34, 206);
             margin-left:14%;
             margin-top: 35px;
             position: absolute;
@@ -130,7 +130,7 @@
             right: 20px;
             margin-top: 200px;
             position: fixed;
-            z-index: 99;
+            z-index: 99999999999;
         }
         #upload{
             top: 500px;
@@ -166,7 +166,7 @@
             top: 1050px;
             position: absolute;
             left: 4%;
-            color: orange;
+            color: red;
             font-size: 20px;
             width: 92%;
             right: 4%;
@@ -225,16 +225,18 @@
         #play{
             float: right;
             position: relative;
-            height: 30px;
+            height: 25px;
             left: -50px;
             margin-right: 50px;
-            font-size: 15px;
+            font-size: 14px;
             width: 100px; 
-            margin-top: 7px;
+            margin-top: 10px;
             display: block;
             border-radius: 50px;                
             background-color: rgb(8, 188, 243);
-            margin: 10px auto;
+            margin: 15px auto;
+            text-align:center;
+            z-index: 99999999;
         }
         #content1 a{
              font-size: 15px;
@@ -358,7 +360,6 @@
 </head>
 <body>
 <script>
-        //一般直接写在一个js文件中
         layui.use(['layer', 'form'], function(){
           var layer = layui.layer
           ,form = layui.form;
@@ -366,7 +367,7 @@
 </script> 
 <div class="wrap">
             <div class="head">
-                <div class="logo"><img src="/img/logo.jpg" alt="logo" height=80px;></div>
+                <div class="logo"><img src="/img/logo.jpg" alt="logo" height=100px;></div>
                    <h2 id="name">正能量加油站</h2>
                 <div class="search-box">
                     <input type="search" id="search" placeholder="输入搜索"/>
@@ -439,8 +440,7 @@
                 </div>
                 
             </div> <!-- /.container -->
-</div> <!-- /.site-header -->
-            <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+</div> 
 <script>
             layui.use('element', function(){
             var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
@@ -464,6 +464,7 @@
     <input type="button" value="学习方法" onclick="detail7()"/> 
     <script>
         function detail7(){
+            video1.pause();
             layer.open({
             skin: 'demo-class',
             area: ['80%', '90%'],
@@ -475,6 +476,7 @@
     </script>
     <script>
         function detail6(){
+            video1.pause();
             layer.open({
             skin: 'demo-class',
             area: ['80%', '90%'],
@@ -486,6 +488,7 @@
     </script>
     <script>
         function detail5(){
+            video1.pause();
             layer.open({
             skin: 'demo-class',
             area: ['80%', '90%'],
@@ -497,6 +500,7 @@
     </script>
     <script>
         function detail4(){
+            video1.pause();
             layer.open({
             skin: 'demo-class',
             area: ['80%', '90%'],
@@ -508,6 +512,7 @@
     </script>
     <script>
         function detail1(){
+            video1.pause();
             layer.open({
             skin: 'demo-class',
             area: ['80%', '90%'],
@@ -519,6 +524,7 @@
     </script>
      <script>
         function detail2(){
+            video1.pause();
             layer.open({
             skin: 'demo-class',
             area: ['80%', '90%'],
@@ -531,6 +537,7 @@
     </script>
     <script>
        function detail3(){
+        video1.pause();
            layer.open({
            skin: 'demo-class',
            area: ['80%', '90%'],
@@ -542,25 +549,28 @@
    </script>  
 </div>
 <div id="lunbo">
-    <video id="video1"  src="video/lunbo1.mp4" controls autoplay muted loop ></video> 
+    <video id="video1"  src="video/lunbo1.mp4" controls ></video> 
 </div>
 <div id="right">
     
-    <p id="play">夏季备忘录
-        <audio id="audio" src="/video/xia.mp3" ></audio>
+    <p id="play">GoodTime
+        <audio id="audio" src="/video/goodtime.mp3" autoplay></audio>
     </p>
     <p id="jianjie1">点击暂停音乐:</p>
     <br/>
     <script type="text/javascript">
                 var play=document.getElementById("play"); //取到p标签
                var audios=document.getElementById("audio");
-               var videos=document.getElementById("video");//取到audio标签
               play.onclick=function(){
-
+                    video1.pause();
+              
                 if(audios.paused){  //进行判断，判断音乐是否在播放
                 audios.play();  //如果音乐是暂停的，点击播放
              }else{
                      audios.pause(); //如果音乐是播放的，点击暂停
+                 }
+                 if (video4.play) {
+                     video4.pause();
                  }
             play.style.backgroundColor="pink";
               }
@@ -593,6 +603,7 @@
     <p class="ml12">你若盛开，清风徐来-</p>
     <script>
         function detail(){
+            video1.pause();
             layer.open({
             skin: 'demo-class',
             area: ['80%', '90%'],
@@ -612,7 +623,7 @@
     <div class="layui-carousel" id="test2" >
         <div carousel-item id="lb1">
           <div><video id="video2" src="/video/cl.mp4"   controls ></video></div>
-          <div><video id="video2" src="video/mangzhong.mp4"  controls  ></video></div>
+          <div><video id="video2" src="/video/mangzhong.mp4"  controls  ></video></div>
           <div><video id="video2" src="/video/ppx.mp4"   controls ></video></div>
         </div>
         <!-- <audio src="video/xia.mp3" loop autoplay preload="auto"></audio> -->
@@ -713,7 +724,7 @@
     <marquee behavior="scroll" scrollamount="8"  direction="right" loop="-1" style="z-index: 9999;position: absolute;" ONMOUSEOUT=this.start() ONMOUSEOVER=this.stop() >
         <img src="/img/ji.gif" width="50px" style="float: left;left: 7%;margin-top: -5px;">
     </marquee>
-    <hr class="layui-bg-orange">
+    <hr class="layui-bg-red">
     <div>
     <video id="video4" src="/video/csmz.mp4" onclick="zimu()"  controls  ></div>
     <div id="jianjie" >
@@ -789,7 +800,7 @@
                     var name = document.getElementById("loginname").value;
                     var pass = document.getElementById("loginpass").value;
 
-                    if(name == "admin" && pass == "a12315"){
+                    if(name == "admin" && pass == "a12345"){
                         setTimeout("javascript:closeLogin();", 0);
                         layer.msg("盼星盼月，可算把您给盼来啦！");
                         // window.location.href='index.html';
