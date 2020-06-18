@@ -1,269 +1,283 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<style>
-</style>
-<meta name="description" content="Sprint is free website template, responsive bootstrap, HTML5 CSS3 layout that can be used for any website.">
-<meta name="viewport" content="width=device-width">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/templatemo_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('/img/yinhua.jpg');
+        }
+        .button{
+            float:right;
+            left: 85%;
+            right:10%;
+            margin-top: 30px;
+            position: absolute;
+        }
+        .table1{
+            border: 5px solid pink;
+            background-color: pink;
+            opacity: 1;
+            width: 100%;
+            height: 20px;
+            font-weight: bolder;
+            
+        }
+        #td1{
+            position: relative;
+            left: 60px;
+            z-index: 99999;
+        }
+        #td2{
+            position: relative;
+            left: 100px;
+            z-index: 99999;
+        }
+        #td3{
+            float: right;
+            right: 80px;
+            position: relative;
+            z-index: 99999;
+        }
+        #td4{
+            position: relative;
+            left: 60px;
+        }
+        #td5{
+            position: relative;
+            left: 60px;
+            z-index: 99999;
+        }
+
+        .table1 a{ font-size: 15px;
+            list-style: none; 
+            text-decoration: none;
+            background-color:pink; 
+            width: 80px; 
+            text-align: center; 
+            border: 1px solid pink; 
+            border-radius: 5px; /*圆角*/
+            margin-top: 2px;
+            display: block;
+        }
+        #damanwei{
+            width: 100%;
+            height: 620px;
+            background-color: black;
+        }
+        #dabeishang{
+            width: 100%;
+            height: 620px;
+            background-color: white;
+        }
+        #manwei{
+            width: 70%;
+            left: 15%;
+            position: relative;
+            border:5px solid white;
+        } 
+        #video2{
+            display: none;
+        }
+        #left{
+            width: 10%;
+            position: absolute;
+        }
+        #anniu{
+            left: 0px;
+            width: 200px;
+            background-color: yellowgreen;
+            color: black;
+            border-radius: 7px;
+            line-height: 30px;
+            letter-spacing: 2px;
+        }
+    </style>
+     <link rel="stylesheet" href="/css/husky.css" media="all">
+     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+     <link rel="stylesheet" href="/css/index.css" media="all">
+     <script src="/bk/jquery-3.5.1.slim.min.js"></script>
+     <script type="text/javascript" src="/layui/layui.js"></script>
 </head>
 <body>
-<div id="front">
-	<div class="site-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-6 col-xs-6">
-					<div id="templatemo_logo">
-						<h1><a href="/index.html" title="点击进入主页">正能量加油站</a></h1>
-					</div> <!-- /.logo -->
-				</div> <!-- /.col-md-4 -->
-				<div class="col-md-8 col-sm-6 col-xs-6">
-					<a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
-					<div class="main-menu">
-						<ul>
-							<li><a href="#front">漫威</a></li>
-							<li><a href="#gxyl">喜剧</a></li>
-							<li><a href="#shanggan">伤感</a></li>
-							<li><a href="#sejm">动漫</a></li>
-						</ul>
-					</div> <!-- /.main-menu -->
-				</div> <!-- /.col-md-8 -->
-			</div> <!-- /.row -->
-			<div class="row">
-				<div class="col-md-12">
-					<div class="responsive">
-						<div class="main-menu">
-							<ul>
-								<li><a href="#front">Home</a></li>
-								<li><a href="#services">热门作者</a></li>
-								<li><a href="#products">热门作品</a></li>
-								<li><a href="#contact">热门分类</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> <!-- /.container -->
-	</div> <!-- /.site-header -->
-</div> <!-- /#front -->
-<div class="site-slider">
-	<ul class="bxslider">
-		<li>
-			<video src="/video/zhizhuxia.mp4" id="video2"   width="100%"  alt="slider image 1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>HTML5 CSS3 Template</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<video src="/video/bigbee.mp4" id="video1"   width="100%" alt="slider image 2">
-			<div class="container caption-wrapper">
-				<div class="slider-caption">
-					<h2>Using Bootstrap Framework</h2>
-				</div>
-			</div>
-		</li>
-	</ul> <!-- /.bxslider -->
-	<div class="bx-thumbnail-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="bx-pager">
-						<a data-slide-index="0" href=""><img src="/img/zhizhuxia.jpg" width="300px" alt="image 1"   onclick="bofang2()" /></a>
-						<a data-slide-index="1" href=""><img src="/img/bigbee.jpg" width="300px" alt="image 2"  onclick="bofang1()"/></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div> <!-- /.site-slider -->
-<div class="site-slider2" >
-	<div class="col-md-12 text-center">
-		<h1 class="section-title">搞笑娱乐</h1>
-	</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<ul class="bxslider" id="gxyl">
-		<li>
-			<video src="/video/aqgy.mp4" controls id="video3" width="100%"  alt="slider image 1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>HTML5 CSS3 Template</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<video src="/video/qiiangjie.mp4" controls id="video4"  width="100%" alt="slider image 2">
-			<div class="container caption-wrapper">
-				<div class="slider-caption">
-					<h2>Using Bootstrap Framework</h2>
-				</div>
-			</div>
-		</li>
-	</ul> <!-- /.bxslider -->
-	<div class="bx-thumbnail-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="bx-pager">
-						<a  ><img src="/img/aqgy.jpg" width="300px"   alt="image 1" /></a>
-						<a data-slide-index="1" href=""><img src="/img/ndmz1.png" width="300px"  alt="image 2" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="site-slider3" >
-	<div class="col-md-12 text-center">
-		<h1 class="section-title">爱情</h1>
-	</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<ul class="bxslider" id="shanggan">
-		<li>
-			<video src="/video/aiqing2.mp4" controls width="100%"  alt="slider image 1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>HTML5 CSS3 Template</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<video src="/video/aiqing1.mp4"  controls width="100%" alt="slider image 2">
-			<div class="container caption-wrapper">
-				<div class="slider-caption">
-					<h2>Using Bootstrap Framework</h2>
-				</div>
-			</div>
-		</li>
-	</ul> <!-- /.bxslider -->
-	<div class="bx-thumbnail-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="bx-pager">
-						<a data-slide-index="0" href=""><img src="/img/aiqing1.png" width="300px"   alt="image 3"  onclick="bofang3()" /></a>
-						<a data-slide-index="1" href=""><img src="/img/aiqing2.png" width="300px"   alt="image 2" /></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
- <!-- /.site-slider -->
- <div class="site-slider4" >
-	<div class="col-md-12 text-center">
-		<h1 class="section-title">动漫</h1>
-	</div> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	<ul class="bxslider" id="sejm">
-		<li>
-			<video src="/video/chicken.mp4" controls width="100%" id="video7" alt="slider image 1">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>HTML5 CSS3 Template</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		<li>
-			<video src="/video/ndmz.mp4" controls width="100%" id="video8" alt="slider image 2">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-right">
-						<div class="slider-caption">
-							<h2>Download and use it for free</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-	</ul> <!-- /.bxslider -->
-	<div class="bx-thumbnail-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="bx-pager">
-						<a data-slide-index="0" href=""><img src="/img/chicken.jpg" width="300px"   alt="image 1"  onclick="bofang7()" /></a>
-						<a data-slide-index="0" href=""><img src="/img/ndmz1.png" width="300px"   alt="image 1" onclick="bofang8()"  /></a>
+    <div class="wrap">
+        
+        <div class="daohang">
+            <div class="col-md-8 col-sm-6 col-xs-6">
+                <table class="table1" >
+                    <tr id="tr1">
+                        <nav>
+                            <td id="td4"><ul id="father">
+                                <li><a class="daohang1" href="index.html">首页</a>
+                                    <ul id="son">
+                                        <li><a class="daohang1" href="#"></a></li>  
+                                    </ul>
+                                </li>
+                            </ul></td>
+                            <td id="td5"><ul id="father">
+                                <li><a href="#">热门作品</a>
+                                    <ul id="son">
+                                        <li><a href="/detail/detail.html">JC.BOX陈莫甜</a></li>
+                                        <li><a href="/detail/lumi.html">鹿米鹿米</a></li>
+                                        <li><a href="/detail/zzZ.html">zzZ</a></li>
+                                        <li><a href="/detail/zyx.html">郑钰熙</a></li>
+                                        <li><a href="/detail/HoneyCC.html">HoneyCC</a></li>
+                                        <li><a href="/detail/dc.html">稻城</a></li>
+                                        <li><a href="/detail/ltx.html">林童学</a></li>
+                                    </ul>
+                                </li>
+                            </ul><td>                            
+                            <td id="td1"><ul id="father">
+                                <li><a href="#">热门作者</a>
+                                    <ul id="son">
+                                        <li><a href="/person/dsmj.html">等什么君</a></li>
+                                        <li><a href="/person/lfcz.html">拉夫船长</a></li>
+                                        <li><a href="/person/lanqiuxinxing.html">篮球新星</a></li>
+                                        <li><a href="/kinds/meishi.html">美食推荐</a></li>
+                                        <li><a href="/person/wyy.html">网易云文案</a></li>
+                                    </ul>
+                                </li>
+                            </ul><td>
+                        
+                            <td id="td2"><ul id="father">
+                                <li><a href="#lunbo2">分类</a>
+                                    <ul id="son">
+                                        <li><a href="/kinds/lizhi.html" target="_self">少年励志</a></li>
+                                        <li><a href="/kinds/music.html">听听音乐</a></li>
+                                        <li><a href="/kinds/kp.html">趣味科普</a></li>
+                                        <li><a href="/kinds/movie.html">热影推荐</a></li>
+                                        <li><a href="#">汉服魅力</a></li>
+                                    </ul>
+                                </li>
+                            </ul></td>
+                            <td id="td3"><ul id="father">
+                                <li><a href="#">我的</a>
+                                    <ul id="son">
+                                        <li><a href="/My/myinformation.html">个人信息</a></li>
+                                        <li><a href="/My/liulanjilu.html">浏览记录</a></li>
+                                        <li><a href="#">退出登录</a></li>
+                                        <li><a href="#">我的分享</a></li>
+                                    </ul>
+                                </li>
+                            </ul></td>
+                        </nav>
+                    </tr>
+                </table>
+            </div>
+            
+        </div> <!-- /.container -->
+</div> <!-- /.site-header -->
+<div id="damanwei">
+<div id="left">
+    <br/>
+    <input type="button" id="anniu" value="大黄蜂" onclick="detail2()"/><br/><br/>
+    <input type="button" id="anniu" value="蜘蛛侠" onclick="detail1()"/><br/>
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+
+    <script>
+        function detail1(){
+        if (video1.paused) {
+            video1.play();  
+        document.getElementById("video2").style.display="none";//设置EleId标签隐藏
+        document.getElementById("video1").style.display="inline";//设置EleId标签显示
+        }
+        else{
+            video1.pause();
+        }
+    }
+        function detail2(){
+        if (video2.paused) {
+            video2.play();
+            document.getElementById("video1").style.display="none";//设置EleId标签隐藏
+            document.getElementById("video2").style.display="inline";//设置EleId标签显示
+        }
+        else{
+            video2.pause();
+        }
+    }
+    </script>
+</div>
+<div id="manwei">
+    <video id="video1" name="video" width="100%" height="100%" src="/video/zhizhuxia.mp4" >
+    </video>
+    <video id="video2" name="video" width="100%" height="100%" src="/video/bigbee.mp4" >
+    </video>
+</div>
+</div>
+<div id="dabeishang">
+    <div id="left">
+        <br/>
+        <input type="button" id="anniu" value="等待爱情" onclick="detail3()"/><br/><br/>
+        <input type="button" id="anniu" value="爱情公寓" onclick="detail4()"/><br/>
+    
+    
+        <script>
+            function detail3(){
+            if (video3.paused) {
+                video3.play();  
+            document.getElementById("video4").style.display="none";//设置EleId标签隐藏
+            document.getElementById("video3").style.display="inline";//设置EleId标签显示
+            }
+            else{
+                video1.pause();
+            }
+        }
+            function detail4(){
+            if (video4.paused) {
+                video4.play();
+                document.getElementById("video3").style.display="none";//设置EleId标签隐藏
+                document.getElementById("video4").style.display="inline";//设置EleId标签显示
+            }
+            else{
+                video4.pause();
+            }
+        }
+        </script>
+    </div>
+    <div id="manwei">
+        <video id="video3" name="video" width="100%" height="100%" src="/video/aiqing2.mp4" >
+        </video>
+        <video id="video4" name="video" width="100%" height="100%" src="/video/aqgy.mp4" style="display: none;" >
+        </video>
+    </div>
 </div>
 <script type="text/javascript">
-	// 获取所有audios
-	var videos = document.getElementsByTagName("video");
-	// 暂停函数
-	function pauseAll() {
-		var self = this;
-		[].forEach.call(videos, function(i) {
-			// 将audios中其他的audio全部暂停
-			i !== self && i.pause();
-		})
-	}
-	// 给play事件绑定暂停函数
-	[].forEach.call(videos, function(i) {
-		i.addEventListener("play", pauseAll.bind(i));
-	})
-	var videoAll = $(".J_catVideo");
-		videoAll.on("click",function(){
-			var cindex = videoAll.index(this);
-			videoAll.each(function (i) {
-				var video = $(this).find('video')[0];
-				if (i == cindex) {
-					if (video.paused) {
-						$(this).find(".J_videoPic").hide();
-						video.play();
-					} else {
-						$(this).find(".J_videoPic").show();
-						video.pause();
-					}
-				}else{
-					if (!video.paused) {
-						$(this).find(".J_videoPic").show();
-						video.pause();
-					}
-				}
-			})
-		})
+    // 获取所有audios
+    var videos = document.getElementsByTagName("video");
+    // 暂停函数
+    function pauseAll() {
+        var self = this;
+        [].forEach.call(videos, function(i) {
+            // 将audios中其他的audio全部暂停
+            i !== self && i.pause();
+        })
+    }
+    // 给play事件绑定暂停函数
+    [].forEach.call(videos, function(i) {
+        i.addEventListener("play", pauseAll.bind(i));
+    })
+    var videoAll = $(".J_catVideo");
+        videoAll.on("click",function(){
+            var cindex = videoAll.index(this);
+            videoAll.each(function (i) {
+                var video = $(this).find('video')[0];
+                if (i == cindex) {
+                    if (video.paused) {
+                        $(this).find(".J_videoPic").hide();
+                        video.play();
+                    } else {
+                        $(this).find(".J_videoPic").show();
+                        video.pause();
+                    }
+                }else{
+                    if (!video.paused) {
+                        $(this).find(".J_videoPic").show();
+                        video.pause();
+                    }
+                }
+            })
+        })
 </script>
-<script>
-	function bofang1(){
-		video1.play();
-	}
-</script>
-<script>
-	function bofang3(){
-		video3.play();
-	}
-</script>
-<script>
-	function bofang2(){
-		video2.play();
-	}
-</script>
-<script src="/bk/jquery-3.5.1.slim.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-<script src="/js/jquery.easing-1.3.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/plugins.js"></script>
-<script src="/js/main.js"></script>
 </body>
 </html>
