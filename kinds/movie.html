@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .daohang{
+            width: 100%;
+            height: 40px;
+            position: relative;
+            position: fixed;
+            z-index: 999999;
+        }
         .button{
             float:right;
             left: 85%;
@@ -13,23 +20,25 @@
             position: absolute;
         }
         .table1{
+            margin-top: -40px;
             border: 5px solid rgb(88, 205, 235);
             background-color: rgb(88,205, 235);
             opacity: 1;
             width: 100%;
-            height: 20px;
+            height: 100%;
             font-weight: bolder;
+
             
         }
         #td1{
             position: relative;
             left: 60px;
-            z-index: 99999;
+
         }
         #td2{
             position: relative;
             left: 100px;
-            z-index: 99999;
+
         }
         #td3{
             float: right;
@@ -44,7 +53,7 @@
         #td5{
             position: relative;
             left: 60px;
-            z-index: 99999;
+
         }
 
         .table1 a{ font-size: 15px;
@@ -57,24 +66,26 @@
             border-radius: 5px; /*圆角*/
             margin-top: 2px;
             display: block;
+            
         }
         #damanwei{
+            margin-top: 40px;
             width: 100%;
-            height: 620px;
+            height: 700px;
             background-image: url("/img/zhizhuxia.jpg");
             background-color: black;
             background-size: 100%;
         }
         #dabeishang{
             width: 100%;
-            height: 750px;
+            height: 700px;
             background-image: url("/img/ttnk.jpg");
             background-color: white;
             background-size: 100%;
         }
         #dagaoxiao{
             width: 100%;
-            height: 620px;
+            height: 700px;
             background-image: url("/img/qiangjie.jpg");
             background-color: white;
             background-size: 100%;
@@ -100,6 +111,7 @@
             position: absolute;
         }
         #anniu{
+            margin-top: 30%;
             left: 0px;
             width: 200px;
             background-color: rgb(6, 175, 226);
@@ -107,6 +119,7 @@
             border-radius: 7px;
             line-height: 30px;
             letter-spacing: 2px;
+            z-index: 999999;
         }
     </style>
      <link rel="stylesheet" href="/css/husky.css" media="all">
@@ -116,73 +129,36 @@
      <script type="text/javascript" src="/layui/layui.js"></script>
 </head>
 <body>
-    <div class="wrap">
-        
-        <div class="daohang">
-            <div class="col-md-8 col-sm-6 col-xs-6">
-                <table class="table1" >
+<div class="daohang">
+        <table class="table1" >
                     <tr id="tr1">
                         <nav>
                             <td id="td4"><ul id="father">
-                                <li><a class="daohang1" href="index.html">首页</a>
+                                <li><a class="daohang1" href="/kinds/movie.html">首页</a>
                                     <ul id="son">
                                         <li><a class="daohang1" href="#"></a></li>  
                                     </ul>
                                 </li>
                             </ul></td>
                             <td id="td5"><ul id="father">
-                                <li><a href="#">热门作品</a>
-                                    <ul id="son">
-                                        <li><a href="/detail/detail.html">JC.BOX陈莫甜</a></li>
-                                        <li><a href="/detail/lumi.html">鹿米鹿米</a></li>
-                                        <li><a href="/detail/zzZ.html">zzZ</a></li>
-                                        <li><a href="/detail/zyx.html">郑钰熙</a></li>
-                                        <li><a href="/detail/HoneyCC.html">HoneyCC</a></li>
-                                        <li><a href="/detail/dc.html">稻城</a></li>
-                                        <li><a href="/detail/ltx.html">林童学</a></li>
-                                    </ul>
+                                <li><a href="#dagaoxiao">搞笑娱乐</a>
+                                    
                                 </li>
                             </ul><td>                            
                             <td id="td1"><ul id="father">
-                                <li><a href="#">热门作者</a>
-                                    <ul id="son">
-                                        <li><a href="/person/dsmj.html">等什么君</a></li>
-                                        <li><a href="/person/lfcz.html">拉夫船长</a></li>
-                                        <li><a href="/person/lanqiuxinxing.html">篮球新星</a></li>
-                                        <li><a href="/kinds/meishi.html">美食推荐</a></li>
-                                        <li><a href="/person/wyy.html">网易云文案</a></li>
-                                    </ul>
+                                <li><a href="#dadongman">优秀动漫</a>
                                 </li>
                             </ul><td>
                         
                             <td id="td2"><ul id="father">
-                                <li><a href="#lunbo2">分类</a>
-                                    <ul id="son">
-                                        <li><a href="/kinds/lizhi.html" target="_self">少年励志</a></li>
-                                        <li><a href="/kinds/music.html">听听音乐</a></li>
-                                        <li><a href="/kinds/kp.html">趣味科普</a></li>
-                                        <li><a href="/kinds/movie.html">热影推荐</a></li>
-                                        <li><a href="#">汉服魅力</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="#dabeishang">爱情故事</a>
+
                             </ul></td>
-                            <td id="td3"><ul id="father">
-                                <li><a href="#">我的</a>
-                                    <ul id="son">
-                                        <li><a href="/My/myinformation.html">个人信息</a></li>
-                                        <li><a href="/My/liulanjilu.html">浏览记录</a></li>
-                                        <li><a href="#">退出登录</a></li>
-                                        <li><a href="#">我的分享</a></li>
-                                    </ul>
-                                </li>
-                            </ul></td>
+                            
                         </nav>
                     </tr>
-                </table>
-            </div>
-            
-        </div> <!-- /.container -->
-</div> <!-- /.site-header -->
+        </table>
+</div> <!-- /.container -->
 <div id="damanwei">
 <div id="left">
     <br/>
