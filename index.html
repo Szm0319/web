@@ -189,6 +189,7 @@
             float: left;
             left: 2px;
             height: 350px;
+            z-index: 999999;
         }
         p{
             top:30px;
@@ -392,7 +393,7 @@
                                 <td id="td5"><ul id="father">
                                     <li><a href="#">热门作品</a>
                                         <ul id="son">
-                                            <li><a href="/detail/detail.html">JC.BOX陈莫甜</a></li>
+                                            <li><a href="/detail/detail.html">陈莫甜</a></li>
                                             <li><a href="/detail/lumi.html">鹿米鹿米</a></li>
                                             <li><a href="/detail/zzZ.html">zzZ</a></li>
                                             <li><a href="/detail/zyx.html">郑钰熙</a></li>
@@ -550,7 +551,7 @@
    </script>  
 </div>
 <div id="lunbo">
-    <video id="video1"  src="video/lunbo1.mp4" autoplay muted loop controls ></video> 
+    <video id="video1"  src="video/lunbo1.mp4" autoplay preload="auto" muted loop controls ></video> 
 </div>
 <div id="right">
     
@@ -629,7 +630,7 @@
         </div>
         <!-- <audio src="video/xia.mp3" loop autoplay preload="auto"></audio> -->
     </div>
-    <a href="/kinds/hanfu.html" class="lianjie">点击了解更多汉服小姐姐</a>
+    <a href="/kinds/hanfu.html" class="lianjie">点击了解更多汉服内容</a>
         <script src="/layui/layui.js"></script>
         <script>
             layui.use('carousel', function(){
@@ -744,7 +745,7 @@
             var index = 0;
             var word = document.getElementById("content2").innerText;
             var video = document.getElementById("video4");
-            var time = setInterval(type)
+            var time = setInterval(type);
             function type() {
                 setInterval(type, 200);//间隔时间
                 if (video.play) {
@@ -753,6 +754,7 @@
                 if(video.paused){
                     index = 0;
                     clearInterval(time);
+                    return false;
 
                 }
                 
@@ -766,16 +768,6 @@
     </div>
 </div>
 <div class="buttom">
-    <!-- <marquee behavior="scroll" contenteditable="true" onstart="this.firstChild.innerHTML+=this.firstChild.innerHTML;" scrollamount="3" width="1400"onmouseover="this.stop();" onmouseout="this.start();">
-        3号车队始建于2020年5月24日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;组长：邵泽明 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;组内成员：李宇昂 马宏昊 宋鹏程 金睿恒 贾智朝    
-        &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;完成项目：正能量加油站 
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 本站主旨为了给当下热门的短视频分类处理 使用户能得到的更好的观看体验
-    </marquee> -->
     <span id="mingyan">努力的样子真美!</span>
 </div>
 
